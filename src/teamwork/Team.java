@@ -26,21 +26,10 @@ public class Team {
         return teamname;
     }
 
-    public void setName(String name)
-    {
-        this.teamname = name;
-    }
-
-    public ArrayList<User> getMembers()
-    {
-        return members;
-    }
-
-    public void setMembers(ArrayList<User> members)
-    {
-        this.members = members;
-    }
-
+    //Emil er lol
+    //ahmed er syg
+    //fred er nice
+    //dette er en test
     public int getId()
     {
         return team_id;
