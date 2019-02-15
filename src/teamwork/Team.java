@@ -26,7 +26,6 @@ public class Team {
         return teamname;
     }
 
-<<<<<<< HEAD
     public void setName(String name)
     {
         this.teamname = name;
@@ -46,11 +45,6 @@ public class Team {
     //ehkjdfkjndf
     //rehijerhjjubrtjo
     //rfhierhjkrkjhrr
-=======
-    //Emil er lol
-    //ahmed er syg
-    //fred er nice
-    //dette er en test
     public int getId()
     {
         return team_id;
@@ -70,7 +64,6 @@ public class Team {
     {
         this.teamname = teamname;
     }
->>>>>>> c776d338cdc622ada3538a1db77c2b3726d642f4
 
     
 }
