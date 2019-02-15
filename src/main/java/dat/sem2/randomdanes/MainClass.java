@@ -1,4 +1,4 @@
-package dat.sem2.randomdanes;
+    package dat.sem2.randomdanes;
 
 import java.util.List;
 
@@ -9,6 +9,7 @@ import java.util.List;
 public class MainClass {
     
     public static void main( String[] args ) {
+        System.out.println("Det simones fil");
         int numberOfDanes = 20; // default 
         if ( args.length > 0 ) {
             try {numberOfDanes = Integer.parseInt( args[0]);} 
@@ -23,3 +24,5 @@ public class MainClass {
     }
 
 }
+
+
