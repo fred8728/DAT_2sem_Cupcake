@@ -40,26 +40,11 @@ public class Team {
     {
         this.members = members;
     }
-
-    public int getId()
-    {
-        return team_id;
-    }
-
-    public void setTeam_id(int team_id)
-    {
-        this.team_id = team_id;
-    }
-
-    public String getTeamname()
-    {
-        return teamname;
-    }
-
-    public void setTeamname(String teamname)
-    {
-        this.teamname = teamname;
-    }
+//hello this is test 
+    //fdiudfdfjh
+    //ehkjdfkjndf
+    //rehijerhjjubrtjo
+    //rfhierhjkrkjhrr
 
     
 }
