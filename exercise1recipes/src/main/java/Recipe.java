@@ -8,6 +8,8 @@
  *rfjerjerkl
  * @author frizz
  */
+
+//simone kan også 
 public class Recipe {
     private int id;
     private String dish;
