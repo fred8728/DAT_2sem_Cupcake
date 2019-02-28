@@ -58,8 +58,8 @@ public class Data_access
         while (rs.next())
         {
             id = rs.getInt("CUPCAKE_id");
-            top = rs.getString("TOP");
-            bottom = rs.getString("BOTTOM");
+            top = rs.getString("TOPPING");
+            bottom = rs.getString("BOTTON");
             price = rs.getDouble("PRICE");
             
             cupcakes.add(new Cupcake(id, top, bottom, price));

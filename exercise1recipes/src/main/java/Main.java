@@ -1,5 +1,6 @@
 
 import java.sql.Statement;
+import java.util.List;
 import java.util.Random;
 
 /*
@@ -19,9 +20,16 @@ public class Main {
         Data_access accessor = new Data_access();
         
         User us = accessor.getUser("sim2000");
-        
         System.out.println(us.toString());
         
+        System.out.println("___________________________________");
+        
+        List <Cupcake> cup = accessor.getCupcakes();
+        for (Cupcake c : cup){
+            System.out.println(c.toString());
+        }
+        
+        System.out.println("________________________________");
         
        /*       
         DBConnector conn = new DBConnector();
