@@ -40,39 +40,33 @@ public class Data_access
         }
         return (ArrayList<User>) users;
     }
-
-    public ArrayList<Team> getTeams() throws Exception
+*/
+    public ArrayList<Cupcake> getCupcakes() throws Exception
     {
         DBConnector conn = new DBConnector();
         Statement statement = conn.getConnection().createStatement();
         String query
                 = "SELECT * "
-                + "FROM team; ";
-        
-                //SELECT team_id, username, teamname FROM user natural join team_member natural join team;
-                // + "WHERE team_id ='" + teamid + "';";
-                
+                + "FROM cupCake; ";
         ResultSet rs = statement.executeQuery(query);
         int id = 0;
-        String name = "";
-        ArrayList members = new ArrayList<>();
-        
-    
-        List <Team> teams = new ArrayList();
-        
-        
+        String top = "";
+        String bottom = "";
+        Double price = null;
+        List cupcakes = new ArrayList<>();
         
         while (rs.next())
         {
-            id = rs.getInt("team_id");
-            name = rs.getString("teamname");
-            members.add(rs.getString("teamname"));
+            id = rs.getInt("CUPCAKE_id");
+            top = rs.getString("TOP");
+            bottom = (rs.getString("BOTTOM"));
+            price = rs.getDouble("PRICE");
             
-            teams.add(new Team(id, name, members));
+            cupcakes.add(new Cupcake(id, top, bottom, price));
         }
-        return (ArrayList<Team>) teams;
+        return (ArrayList<Cupcake>) cupcakes;
     }
-*/
+
     public User getUser(String username) throws Exception
     {
         DBConnector conn = new DBConnector();
