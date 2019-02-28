@@ -17,6 +17,12 @@ public class Main {
     
     public static void main(String[] args) throws Exception {
         Data_access accessor = new Data_access();
+        
+        User us = accessor.getUser("sim2000");
+        
+        System.out.println(us.toString());
+        
+        
        /*       
         DBConnector conn = new DBConnector();
         Statement statement = conn.getConnection().createStatement();
