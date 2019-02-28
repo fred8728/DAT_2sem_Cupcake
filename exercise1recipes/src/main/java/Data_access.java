@@ -67,7 +67,7 @@ public class Data_access
         return (ArrayList<Cupcake>) cupcakes;
     }
     
-    public ArrayList <Cupcake> getBottoms() throws Exception
+    public ArrayList <Cupcake> getBottoms(String bottom) throws Exception
     {
         DBConnector conn = new DBConnector();
         Statement statement = conn.getConnection().createStatement();

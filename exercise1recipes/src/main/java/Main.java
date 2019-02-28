@@ -35,7 +35,7 @@ public class Main {
         System.out.println("________________________________");
         
         System.out.println("List of bottoms:");
-        List <Cupcake> cups = accessor.getBottoms();
+        List <Cupcake> cups = accessor.getBottoms("Vanilje");
         for (Cupcake ce : cups){
             System.out.println(ce.toString());
         
