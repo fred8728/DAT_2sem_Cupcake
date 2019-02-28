@@ -72,7 +72,7 @@ public class Data_access
         return (ArrayList<Team>) teams;
     }
 */
-    /*public Recipe getRecipe(int id) throws Exception
+    public Recipe getRecipe(int id) throws Exception
     {
         DBConnector conn = new DBConnector();
         Statement statement = conn.getConnection().createStatement();
@@ -113,6 +113,7 @@ public class Data_access
         }
     }
     
+/*
     public Team getTeam(String teamname) throws Exception
     {
         DBConnector conn = new DBConnector();
