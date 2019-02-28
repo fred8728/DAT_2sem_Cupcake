@@ -35,12 +35,13 @@ public class Main {
         System.out.println("________________________________");
         
         System.out.println("List of bottoms:");
-        List <Cupcake> cups = accessor.getBottoms("BOTTON");
+        List <Cupcake> cups = accessor.getBottoms();
         for (Cupcake ce : cups){
             System.out.println(ce.toString());
-        }
+        
         
         System.out.println("________________________________");
+    
        /*       
         DBConnector conn = new DBConnector();
         Statement statement = conn.getConnection().createStatement();
@@ -64,4 +65,5 @@ public class Main {
         */
         
     }
+}
 }

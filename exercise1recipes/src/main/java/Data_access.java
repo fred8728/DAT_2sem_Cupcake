@@ -47,7 +47,7 @@ public class Data_access
         Statement statement = conn.getConnection().createStatement();
         String query
                 = "SELECT * "
-                + "FROM cupCake; ";
+                + "FROM CUPCAKE; ";
         ResultSet rs = statement.executeQuery(query);
         int id = 0;
         String top = "";
@@ -67,15 +67,16 @@ public class Data_access
         return (ArrayList<Cupcake>) cupcakes;
     }
     
-    public List getBottoms(String bottom) throws Exception
+    public ArrayList <Cupcake> getBottoms() throws Exception
     {
         DBConnector conn = new DBConnector();
         Statement statement = conn.getConnection().createStatement();
         String query
                 = "SELECT BOTTON "
-                + "FROM cupCake; ";
+                + "FROM CUPCAKE; ";
         ResultSet rs = statement.executeQuery(query);
         
+        String bottom = "";        
         List cupcakes = new ArrayList<>();
         
         while (rs.next())
@@ -84,7 +85,7 @@ public class Data_access
             
             cupcakes.add(bottom);
         }
-        return cupcakes;
+        return (ArrayList<Cupcake>) cupcakes;
     }
 
     public User getUser(String username) throws Exception
