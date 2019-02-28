@@ -25,7 +25,7 @@ public class Main {
                 + "values "
                 + "('" + "8" + "', '" + "Lakselasagne" + "');";
         statement.executeUpdate(query);
-        */
+        
         
         Recipe rep = accessor.getRecipe(2);
         
@@ -37,7 +37,7 @@ public class Main {
         System.out.println(rep.toString());
         System.out.println(rep.toString());
         System.out.println(rep.toString());
-        
+        */
         
     }
 }
