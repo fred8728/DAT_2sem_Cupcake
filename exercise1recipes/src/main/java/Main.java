@@ -34,10 +34,10 @@ public class Main {
         
         System.out.println("________________________________");
         
-        System.out.println("List of bottoms:");
-        List <Cupcake> cups = accessor.getBottoms("Vanilje");
+        /*System.out.println("List of bottoms:");
+        List <Cupcake> cups = accessor.getBottoms();
         for (Cupcake ce : cups){
-            System.out.println(ce.toString());
+            System.out.println(ce.toString());*/
         
         
         System.out.println("________________________________");
@@ -66,4 +66,4 @@ public class Main {
         
     }
 }
-}
+
