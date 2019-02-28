@@ -3,6 +3,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 public class Data_access 
 {
@@ -97,6 +98,17 @@ public class Data_access
         }
         return us;
         
+    }
+    //menes der email eller balance mon tro
+    public void createUser(String username, String password, String balance) throws Exception
+    {
+        DBConnector conn = new DBConnector();
+        Statement statement = conn.getConnection().createStatement();
+        String query
+                = "insert into USERS "
+                + "values "
+                + "('" + username + "', '" + password + "', '" + balance + ");";
+        statement.executeUpdate(query);
     }
     /*public Recipe getRecipe(int id) throws Exception
     {
