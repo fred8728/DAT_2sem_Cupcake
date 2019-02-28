@@ -161,4 +161,8 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/macos,maven,windows,netbeans
 >>>>>>> origin/master
 >>>>>>> origin/master
+<<<<<<< HEAD
 /nbproject/
+=======
+/nbproject/
+>>>>>>> origin/master
