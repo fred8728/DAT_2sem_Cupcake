@@ -72,30 +72,28 @@ public class Data_access
         return (ArrayList<Team>) teams;
     }
 */
-    public User getUser(int id) throws Exception
+    public User getUser(String username) throws Exception
     {
         DBConnector conn = new DBConnector();
         Statement statement = conn.getConnection().createStatement();
         String query
                 = "SELECT * "
-                + "FROM user "
-                + "WHERE id = '" + id + "';";
+                + "FROM users "
+                + "WHERE username = '" + username + "';";
                 
         ResultSet rs = statement.executeQuery(query);
         User us = null;
-        String username = "";
         String password = "";
         double balance = 0;
        
         
         while (rs.next())
         {
-            id = rs.getInt("id");
             username = rs.getString("username");
             password = rs.getString("password");
             balance = rs.getDouble("balance");
             
-            us = new User(id, username, password, balance);
+            us = new User(username, password, balance);
         }
         return us;
         

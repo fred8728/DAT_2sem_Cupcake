@@ -10,14 +10,12 @@
  * @author frizz
  */
 public class User {
-    private int id;
     private String username;
     private String password;
     private double balance;
     
-    User(int id, String username, String password, double balance)
+    User(String username, String password, double balance)
     {
-        this.id = id;
         this.username = username;
         this.password = password;
         this.balance = balance;
@@ -25,7 +23,7 @@ public class User {
     }
     
     public String toString (){
-        return "User: User_ID = " + id + "Username = " + username + "Password = " + password + "Balance = " + balance; 
+        return "User: Username = " + username + "Password = " + password + "Balance = " + balance; 
     }
     
 }
