@@ -59,12 +59,32 @@ public class Data_access
         {
             id = rs.getInt("CUPCAKE_id");
             top = rs.getString("TOP");
-            bottom = (rs.getString("BOTTOM"));
+            bottom = rs.getString("BOTTOM");
             price = rs.getDouble("PRICE");
             
             cupcakes.add(new Cupcake(id, top, bottom, price));
         }
         return (ArrayList<Cupcake>) cupcakes;
+    }
+    
+    public List getBottoms(String bottom) throws Exception
+    {
+        DBConnector conn = new DBConnector();
+        Statement statement = conn.getConnection().createStatement();
+        String query
+                = "SELECT BOTTOM "
+                + "FROM cupCake; ";
+        ResultSet rs = statement.executeQuery(query);
+        
+        List cupcakes = new ArrayList<>();
+        
+        while (rs.next())
+        {
+            bottom = rs.getString("BOTTOM");
+            
+            cupcakes.add(bottom);
+        }
+        return cupcakes;
     }
 
     public User getUser(String username) throws Exception
@@ -73,7 +93,7 @@ public class Data_access
         Statement statement = conn.getConnection().createStatement();
         String query
                 = "SELECT * "
-                + "FROM users "
+                + "FROM USERS "
                 + "WHERE username = '" + username + "';";
                 
         ResultSet rs = statement.executeQuery(query);
