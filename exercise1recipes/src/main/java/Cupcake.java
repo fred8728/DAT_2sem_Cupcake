@@ -16,7 +16,7 @@ public class Cupcake {
 
     @Override
     public String toString() {
-        return "Cupcake{" + "id=" + id + ", top=" + top + ", bottom=" + bottom + ", price=" + price + '}';
+        return "Cupcake{" + "id = " + id + ", top = " + top + ", bottom = " + bottom + ", price = " + price + '}';
     }
 
     public Cupcake(int id, String top, String bottom, double price) {

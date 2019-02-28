@@ -72,7 +72,7 @@ public class Data_access
         DBConnector conn = new DBConnector();
         Statement statement = conn.getConnection().createStatement();
         String query
-                = "SELECT BOTTOM "
+                = "SELECT BOTTON "
                 + "FROM cupCake; ";
         ResultSet rs = statement.executeQuery(query);
         
@@ -80,7 +80,7 @@ public class Data_access
         
         while (rs.next())
         {
-            bottom = rs.getString("BOTTOM");
+            bottom = rs.getString("BOTTON");
             
             cupcakes.add(bottom);
         }
