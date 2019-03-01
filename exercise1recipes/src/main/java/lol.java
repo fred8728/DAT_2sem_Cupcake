@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -55,11 +56,33 @@ public class lol extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    /*protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-           throws ServletException, IOException {
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         ArrayList<String> list = new ArrayList<>();
         Data_access accessor = new Data_access();
         ArrayList<Integer> num = new ArrayList<>();
+        HttpSession session = request.getSession();
+        Boolean loggedIn = (Boolean) session.getAttribute("loggedIn");
+        if (loggedIn == null || !loggedIn) {
+            PageLogin.generateLogin(response);
+        }
+        String action = request.getParameter("action");
+        if (null == action) {
+            PageMain.generateMain(response);
+        } else {
+            switch (action) {
+                case "hello":
+                    PageHello.generateHello(response);
+                    break;
+                case "buy":
+                    PageBuy.generateBuy(response);
+                    break;
+                case "login":
+                    session.setAttribute("loggedIn", true);
+                    PageLoggedIn.generateLoggedIn(response);
+                    break;
+            }
+        }
         try {
             int max = Data_access.max() + 1;
             num.add(max);
@@ -77,9 +100,9 @@ public class lol extends HttpServlet {
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
-            } 
+            }
 
-  TODO output your page here. You may use following sample code. 
+            //TODO output your page here. You may use following sample code. 
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -89,18 +112,18 @@ public class lol extends HttpServlet {
             out.println("<h1>Servlet: Recipes </h1>");
             String rep = request.getParameter("rep");
             int nr = Integer.parseInt(rep);
-            out.println(list.get(nr -1));
-         //   for (int i = 0; i < num.get(0); i++) {
-           //     out.println(list.get(i));
-             //   out.println("</br>");
+            out.println(list.get(nr - 1));
+            //   for (int i = 0; i < num.get(0); i++) {
+            //     out.println(list.get(i));
+            //   out.println("</br>");
             //  out.println(<img src="https://www.agria.dk/imagevault/publishedmedia/yszdzq8xv1itg6h3om6z/schafervalp-pa-sommaren.jpg">);
             //}
-            
+
             out.println("</body>");
             out.println("</html>");
         }
     }
-*/
+
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -110,13 +133,12 @@ public class lol extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    /*
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
-*/
+
     /**
      * Handles the HTTP <code>POST</code> method.
      *
@@ -125,20 +147,20 @@ public class lol extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    /*@Override
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-    }*/
+    }
 
     /**
      * Returns a short description of the servlet.
      *
      * @return a String containing servlet description
      */
-    /* @Override
+    @Override
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-*/
+
 }
