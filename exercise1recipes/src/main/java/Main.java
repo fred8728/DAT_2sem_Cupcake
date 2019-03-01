@@ -56,6 +56,9 @@ public class Main {
          System.out.println(lol);
     
           System.out.println("________________________________");
+          
+          System.out.println("create user");
+          
        /*       
         DBConnector conn = new DBConnector();
         Statement statement = conn.getConnection().createStatement();
