@@ -64,7 +64,9 @@ public class lol extends HttpServlet {
         HttpSession session = request.getSession();
         Boolean loggedIn = (Boolean) session.getAttribute("loggedIn");
         if (loggedIn == null || !loggedIn) {
+            PageNewUser.generateUser(response);
             PageLogin.generateLogin(response);
+            
         }
         String action = request.getParameter("action");
         if (null == action) {

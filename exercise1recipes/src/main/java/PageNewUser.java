@@ -30,10 +30,10 @@ public class PageNewUser {
             out.println("<h1>Make a new User!</h1>");
             out.println("<p><a href=\"/exercise1recipes/lol?action=newuser\">Log in</a></p>");
             out.println("<form>\n" +
-"  First name:<br>\n" +
-"  <input type=\"text\" name=\"firstname\"><br>\n" +
-"  Last name:<br>\n" +
-"  <input type=\"text\" name=\"lastname\">\n" +
+"  Username:<br>\n" +
+"  <input type=\"text\" name=\"Username\"><br>\n" +
+"  Password:<br>\n" +
+"  <input type=\"text\" name=\"Password\">\n" +
 "</form>");
             out.println("</body>");
             out.println("</html>");
