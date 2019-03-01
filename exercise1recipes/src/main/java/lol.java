@@ -63,32 +63,33 @@ public class lol extends HttpServlet {
         ArrayList<Integer> num = new ArrayList<>();
         HttpSession session = request.getSession();
         Boolean loggedIn = (Boolean) session.getAttribute("loggedIn");
-        if (loggedIn == null || !loggedIn) {
-            PageNewUser.generateUser(request,response);
-            PageLogin.generateLogin(response);
-            
-        }
         String action = request.getParameter("action");
         if (null == action) {
             PageMain.generateMain(response);
+            if (loggedIn == null || !loggedIn) {
+                PageNewUser.generateUser(response);
+                PageLogin.generateLogin(response);
+
+            }
+
         } else {
             switch (action) {
                 case "newuser":
-                    PageNewUser.generateUser(request,response);
+                    PageNewUser.generateUser(response);
                     break;
-               /* case "buy":
-                    PageBuy.generateBuy(response);
+                case "create_user":
+                    PageCreateUser.CreateUser(request, response);
                     break;
-                case "login":
+                /*   case "login":
                     session.setAttribute("loggedIn", true);
                     PageLoggedIn.generateLoggedIn(response);
                     break;
             }*/
-        }
+            }
         }
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-       /*
+            /*
             //TODO output your page here. You may use following sample code. 
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -108,9 +109,8 @@ public class lol extends HttpServlet {
 
             out.println("</body>");
             out.println("</html>");
-       */ }
+             */ }
     }
-    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

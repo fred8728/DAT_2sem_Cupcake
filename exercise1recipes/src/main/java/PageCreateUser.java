@@ -1,6 +1,7 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /*
@@ -15,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class PageCreateUser 
 {
-    public static void generateUser(HttpServletResponse response) throws IOException
+    public static void CreateUser(HttpServletRequest request,HttpServletResponse response) throws IOException
     {
         Data_access acc = new Data_access();
        
@@ -28,8 +29,19 @@ public class PageCreateUser
             out.println("<title>Servlet lol</title>");
             out.println("</head>");
             out.println("<body>");
+<<<<<<< HEAD
             out.println("<h1>Main landing page!</h1>");
             
+=======
+            out.println("<h1>You have created a new user!</h1>");
+                        String username = request.getParameter("username");
+            String password = request.getParameter("password");
+            try {
+            acc.createUser(username, password);
+                
+            } catch (Exception e) {
+            }
+>>>>>>> 62e30030bd8fd39da6607307dcb0d4ea206ec7fa
             out.println("<p><a href=\"/exercise1recipes/lol?action=buy\">Buy something</a></p>");
             out.println("</body>");
             out.println("</html>");

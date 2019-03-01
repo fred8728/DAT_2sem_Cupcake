@@ -29,6 +29,7 @@ public class PageMain
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Main landing page!</h1>");
+            out.println("<p><a href=\"/exercise1recipes/lol?action=newuser\">Create new user!</a></p>");
             out.println("<p><a href=\"/exercise1recipes/lol?action=buy\">Buy something</a></p>");
             out.println("</body>");
             out.println("</html>");
