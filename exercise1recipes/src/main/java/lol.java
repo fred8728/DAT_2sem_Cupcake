@@ -64,7 +64,7 @@ public class lol extends HttpServlet {
         HttpSession session = request.getSession();
         Boolean loggedIn = (Boolean) session.getAttribute("loggedIn");
         if (loggedIn == null || !loggedIn) {
-            PageNewUser.generateUser(request,response);
+            PageNewUser.generateUser(response);
             PageLogin.generateLogin(response);
             
         }
@@ -74,12 +74,12 @@ public class lol extends HttpServlet {
         } else {
             switch (action) {
                 case "newuser":
-                    PageNewUser.generateUser(request,response);
+                    PageNewUser.generateUser(response);
                     break;
-               /* case "buy":
-                    PageBuy.generateBuy(response);
-                    break;
-                case "login":
+               // case "create_user":
+             //       PageCrateUser.CreateUser(response);
+                 //   break;
+             /*   case "login":
                     session.setAttribute("loggedIn", true);
                     PageLoggedIn.generateLoggedIn(response);
                     break;

@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class PageNewUser {
 
-    public static void generateUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public static void generateUser(HttpServletResponse response) throws IOException {
 
         try (PrintWriter out = response.getWriter()) {
             Data_access acc = new Data_access();
@@ -24,10 +24,9 @@ public class PageNewUser {
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet lol</title>");
-
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Make a new User!" + request.getContextPath() + "</h1>");
+            out.println("<h1>Make a new User!</h1>");
             out.println("<p><a href=\"/exercise1recipes/lol?action=newuser\">Log in</a></p>");
             out.println("<form method=\"GET\">" //post
                     + "Username:<br>"
