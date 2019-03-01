@@ -64,7 +64,7 @@ public class lol extends HttpServlet {
         HttpSession session = request.getSession();
         Boolean loggedIn = (Boolean) session.getAttribute("loggedIn");
         if (loggedIn == null || !loggedIn) {
-            PageNewUser.generateUser(response);
+            PageNewUser.generateUser(request,response);
             PageLogin.generateLogin(response);
             
         }
@@ -74,7 +74,7 @@ public class lol extends HttpServlet {
         } else {
             switch (action) {
                 case "newuser":
-                    PageNewUser.generateUser(response);
+                    PageNewUser.generateUser(request,response);
                     break;
                /* case "buy":
                     PageBuy.generateBuy(response);
@@ -85,26 +85,10 @@ public class lol extends HttpServlet {
                     break;
             }*/
         }
-        }/*
-       /* try {
-            int max = Data_access.max() + 1;
-            num.add(max);
-        } catch (Exception e) {
-        }*/
+        }
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-       /*     for (int i = 0; i < num.get(0); i++) {
-                try {
-                    Recipe rep = accessor.getRecipe(i);
-                    String str = rep.toString();
-                    str = str.replace("{id=" + i + ", name=", ":");
-                    str = str.replace("}", "");
-                    list.add(str);
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
-            }
-*//*
+       /*
             //TODO output your page here. You may use following sample code. 
             out.println("<!DOCTYPE html>");
             out.println("<html>");
