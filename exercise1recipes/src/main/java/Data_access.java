@@ -83,12 +83,29 @@ public class Data_access {
             bottom = rs.getString("BOTTON");
             
             bottoms.add(bottom);
-            
-            
-        }
-    
+            }
         return bottoms; 
 }
+    
+    public List getTops() throws Exception
+    {
+        DBConnector conn = new DBConnector();
+        Statement statement = conn.getConnection().createStatement();
+        String query
+                = "SELECT TOPPING FROM CUPCAKE; ";
+
+        ResultSet rs = statement.executeQuery(query);
+        String topping = "";
+
+        List top = new ArrayList();
+        
+            while (rs.next()) {
+                topping = rs.getString("TOPPING");
+            
+                top.add(topping);
+            }
+        return top; 
+    }
 
 public User getUser(String username) throws Exception {
         DBConnector conn = new DBConnector();

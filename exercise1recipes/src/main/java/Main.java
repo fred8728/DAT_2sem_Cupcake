@@ -44,6 +44,12 @@ public class Main {
         
         
         System.out.println("________________________________");
+        
+        System.out.println("List of topzz:");
+        List topz = accessor.getTops();
+        System.out.println(topz.toString());
+        
+         System.out.println("________________________________");
     
        /*       
         DBConnector conn = new DBConnector();
