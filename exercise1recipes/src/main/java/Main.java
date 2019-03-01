@@ -59,6 +59,8 @@ public class Main {
           
           System.out.println("create user");
           
+          accessor.createUser("fred", "lol123");
+          
        /*       
         DBConnector conn = new DBConnector();
         Statement statement = conn.getConnection().createStatement();

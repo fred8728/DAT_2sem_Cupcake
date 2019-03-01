@@ -29,7 +29,7 @@ public class PageCreateUser
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Main landing page!</h1>");
-            out.println(acc.createUser(username, password));
+            
             out.println("<p><a href=\"/exercise1recipes/lol?action=buy\">Buy something</a></p>");
             out.println("</body>");
             out.println("</html>");
