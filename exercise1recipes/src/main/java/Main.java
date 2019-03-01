@@ -50,7 +50,12 @@ public class Main {
         System.out.println(topz.toString());
         
          System.out.println("________________________________");
+         
+         System.out.println("Comparing Passwordz");
+         boolean lol = accessor.comparePassword("DAV5000", "1234");
+         System.out.println(lol);
     
+          System.out.println("________________________________");
        /*       
         DBConnector conn = new DBConnector();
         Statement statement = conn.getConnection().createStatement();

@@ -141,6 +141,30 @@ public User getUser(String username) throws Exception {
                 + "('" + username + "', '" + password + "', '" + balance + ");";
         statement.executeUpdate(query);
     }
+    
+    public boolean comparePassword(String username, String password) throws Exception
+    {
+        DBConnector conn = new DBConnector();
+        Statement statement = conn.getConnection().createStatement();
+        String query
+                = " SELECT PASSWORD "
+                + " FROM USERS "
+                + " WHERE USERNAME ='" + username + "'; ";
+        ResultSet rs = statement.executeQuery(query);
+
+        String passwordreal = "";
+        while (rs.next()) {
+            passwordreal = rs.getString("PASSWORD");
+        }
+        if(password.equalsIgnoreCase(passwordreal))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     /*public Recipe getRecipe(int id) throws Exception
     {
         DBConnector conn = new DBConnector();
