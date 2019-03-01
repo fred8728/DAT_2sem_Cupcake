@@ -18,7 +18,6 @@ public class PageNewUser {
     public static void generateUser(HttpServletResponse response) throws IOException {
 
         try (PrintWriter out = response.getWriter()) {
-            Data_access acc = new Data_access();
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
