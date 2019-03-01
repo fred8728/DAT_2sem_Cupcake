@@ -117,10 +117,12 @@ public User getUser(String username) throws Exception {
 
         ResultSet rs = statement.executeQuery(query);
         User us = null;
+        //id = 0;
         String password = "";
         double balance = 0;
 
         while (rs.next()) {
+            //id = rs.getInt("USER_ID");
             username = rs.getString("username");
             password = rs.getString("password");
             balance = rs.getDouble("balance");
@@ -132,13 +134,13 @@ public User getUser(String username) throws Exception {
     }
 
     //menes der email eller balance mon tro
-    public void createUser(String username, String password, String balance) throws Exception {
+    public void createUser(String username, String password) throws Exception {
         DBConnector conn = new DBConnector();
         Statement statement = conn.getConnection().createStatement();
         String query
                 = "insert into USERS "
                 + "values "
-                + "('" + username + "', '" + password + "', '" + balance + ");";
+                + "('" + username + "', '" + password + "', '" + 0 + ");";
         statement.executeUpdate(query);
     }
     
