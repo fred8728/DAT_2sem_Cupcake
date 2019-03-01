@@ -1,5 +1,6 @@
 
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
@@ -66,27 +67,27 @@ public class Data_access {
         return (ArrayList<Cupcake>) cupcakes;
     }
 
-    public List<Cupcake> getBottoms() throws Exception {
+    public List getBottoms() throws Exception {
+        DBConnector conn = new DBConnector();
+            Statement statement = conn.getConnection().createStatement();
         
-        ArrayList <cupcake> cupcakes = new ArrayList<>();
         String query
                 = "SELECT BOTTON FROM CUPCAKE; ";
 
+        ResultSet rs = statement.executeQuery(query);
         String bottom = "";
 
-        try {
-            DBConnector conn = new DBConnector();
-            Statement statement = conn.getConnection().createStatement();
-            ResultSet rs = statement.executeQuery(query);
+        List bottoms = new ArrayList();
         
         while (rs.next()) {
             bottom = rs.getString("BOTTON");
-
-            cupcakes.add(new Cupcake(bottom);
+            
+            bottoms.add(bottom);
+            
+            
         }
-    } catch (SQLException ex){
-    }
-        return cupcakes ;
+    
+        return bottoms; 
 }
 
 public User getUser(String username) throws Exception {

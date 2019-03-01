@@ -34,9 +34,12 @@ public class Main {
         
         System.out.println("________________________________");
         
-        /*System.out.println("List of bottoms:");
-        List <Cupcake> cups = accessor.getBottoms();
-        for (Cupcake ce : cups){
+        
+        
+        System.out.println("List of bottoms:");
+        List bots = accessor.getBottoms();
+        System.out.println(bots.toString());
+        /*for (Cupcake ce : cups){
             System.out.println(ce.toString());*/
         
         
