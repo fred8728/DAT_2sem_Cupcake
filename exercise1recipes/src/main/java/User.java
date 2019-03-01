@@ -23,7 +23,7 @@ public class User {
     }
     
     public String toString (){
-        return "User: Username = " + username + "Password = " + password + "Balance = " + balance; 
+        return "User: Username = " + username + " " + ",Password = " + password + " " +  ",Balance = " + balance; 
     }
     
 }

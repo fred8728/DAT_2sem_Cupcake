@@ -1,5 +1,6 @@
 
 import java.sql.Statement;
+import java.util.List;
 import java.util.Random;
 
 /*
@@ -18,11 +19,32 @@ public class Main {
     public static void main(String[] args) throws Exception {
         Data_access accessor = new Data_access();
         
+        System.out.println("_________________________________");
+        System.out.println("User-info:");
         User us = accessor.getUser("sim2000");
-        
         System.out.println(us.toString());
         
+        System.out.println("___________________________________");
         
+        System.out.println("List of cupcakes:");
+        List <Cupcake> cup = accessor.getCupcakes();
+        for (Cupcake c : cup){
+            System.out.println(c.toString());
+        }
+        
+        System.out.println("________________________________");
+        
+        
+        
+        System.out.println("List of bottoms:");
+        List bots = accessor.getBottoms();
+        System.out.println(bots.toString());
+        /*for (Cupcake ce : cups){
+            System.out.println(ce.toString());*/
+        
+        
+        System.out.println("________________________________");
+    
        /*       
         DBConnector conn = new DBConnector();
         Statement statement = conn.getConnection().createStatement();
@@ -47,3 +69,4 @@ public class Main {
         
     }
 }
+

@@ -1,12 +1,14 @@
+
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-public class Data_access 
-{
+public class Data_access {
+
     /*private DBConnector connector = null;
 
     Data_access(DBConnector connector) 
@@ -40,82 +42,80 @@ public class Data_access
         }
         return (ArrayList<User>) users;
     }
-*/
-    public ArrayList<Cupcake> getCupcakes() throws Exception
-    {
+     */
+    public ArrayList<Cupcake> getCupcakes() throws Exception {
         DBConnector conn = new DBConnector();
         Statement statement = conn.getConnection().createStatement();
         String query
                 = "SELECT * "
-                + "FROM cupCake; ";
+                + "FROM CUPCAKE; ";
         ResultSet rs = statement.executeQuery(query);
         int id = 0;
         String top = "";
         String bottom = "";
         Double price = null;
         List cupcakes = new ArrayList<>();
-        
-        while (rs.next())
-        {
+
+        while (rs.next()) {
             id = rs.getInt("CUPCAKE_id");
-            top = rs.getString("TOP");
-            bottom = rs.getString("BOTTOM");
+            top = rs.getString("TOPPING");
+            bottom = rs.getString("BOTTON");
             price = rs.getDouble("PRICE");
-            
+
             cupcakes.add(new Cupcake(id, top, bottom, price));
         }
         return (ArrayList<Cupcake>) cupcakes;
     }
-    
-    public List getBottoms(String bottom) throws Exception
-    {
-        DBConnector conn = new DBConnector();
-        Statement statement = conn.getConnection().createStatement();
-        String query
-                = "SELECT BOTTOM "
-                + "FROM cupCake; ";
-        ResultSet rs = statement.executeQuery(query);
-        
-        List cupcakes = new ArrayList<>();
-        
-        while (rs.next())
-        {
-            bottom = rs.getString("BOTTOM");
-            
-            cupcakes.add(bottom);
-        }
-        return cupcakes;
-    }
 
-    public User getUser(String username) throws Exception
-    {
+    public List getBottoms() throws Exception {
+        DBConnector conn = new DBConnector();
+            Statement statement = conn.getConnection().createStatement();
+        
+        String query
+                = "SELECT BOTTON FROM CUPCAKE; ";
+
+        ResultSet rs = statement.executeQuery(query);
+        String bottom = "";
+
+        List bottoms = new ArrayList();
+        
+        while (rs.next()) {
+            bottom = rs.getString("BOTTON");
+            
+            bottoms.add(bottom);
+            
+            
+        }
+    
+        return bottoms; 
+}
+
+public User getUser(String username) throws Exception {
         DBConnector conn = new DBConnector();
         Statement statement = conn.getConnection().createStatement();
         String query
                 = "SELECT * "
                 + "FROM USERS "
                 + "WHERE username = '" + username + "';";
-                
+
         ResultSet rs = statement.executeQuery(query);
         User us = null;
         String password = "";
         double balance = 0;
-       
-        
-        while (rs.next())
-        {
+
+        while (rs.next()) {
             username = rs.getString("username");
             password = rs.getString("password");
             balance = rs.getDouble("balance");
-            
+
             us = new User(username, password, balance);
         }
         return us;
-        
+
     }
+
     //menes der email eller balance mon tro
-    public void createUser(String username, String password, String balance) throws Exception
-    {
+    public void createUser(String username, String password, String balance) throws Exception {
         DBConnector conn = new DBConnector();
         Statement statement = conn.getConnection().createStatement();
         String query
@@ -188,4 +188,4 @@ public class Data_access
             team = new Team(id, teamname, members);
         }
         return team;*/
-    }
+}
