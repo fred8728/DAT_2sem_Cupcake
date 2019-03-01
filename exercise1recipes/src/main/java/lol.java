@@ -71,26 +71,27 @@ public class lol extends HttpServlet {
             PageMain.generateMain(response);
         } else {
             switch (action) {
-                case "hello":
-                    PageHello.generateHello(response);
+                case "newuser":
+                    PageNewUser.generateUser(response);
                     break;
-                case "buy":
+               /* case "buy":
                     PageBuy.generateBuy(response);
                     break;
                 case "login":
                     session.setAttribute("loggedIn", true);
                     PageLoggedIn.generateLoggedIn(response);
                     break;
-            }
+            }*/
         }
-        try {
+        }/*
+       /* try {
             int max = Data_access.max() + 1;
             num.add(max);
         } catch (Exception e) {
-        }
+        }*/
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            for (int i = 0; i < num.get(0); i++) {
+       /*     for (int i = 0; i < num.get(0); i++) {
                 try {
                     Recipe rep = accessor.getRecipe(i);
                     String str = rep.toString();
@@ -101,7 +102,7 @@ public class lol extends HttpServlet {
                     ex.printStackTrace();
                 }
             }
-
+*//*
             //TODO output your page here. You may use following sample code. 
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -121,8 +122,9 @@ public class lol extends HttpServlet {
 
             out.println("</body>");
             out.println("</html>");
-        }
+       */ }
     }
+    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
