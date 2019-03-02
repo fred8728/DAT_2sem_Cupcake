@@ -65,13 +65,13 @@ public class lol extends HttpServlet {
         Boolean loggedIn = (Boolean) session.getAttribute("loggedIn");
         String action = request.getParameter("action");
         if (null == action) {
-            PageMain.generateMain(response);
             if (loggedIn == null || !loggedIn) {
-                PageNewUser.generateUser(response);
                 PageLogin.generateLogin(response);
+                PageNewUser.generateUser(response);
 
             }
-
+PageMain.generateMain(response);
+            
         } else {
             switch (action) {
                 case "newuser":
@@ -80,13 +80,20 @@ public class lol extends HttpServlet {
                 case "create_user":
                     PageCreateUser.CreateUser(request, response);
                     break;
-                /*   case "login":
+                case "main":
+                    PageMain.generateMain(response);
+                    break;
+                case "login":
                     session.setAttribute("loggedIn", true);
                     PageLoggedIn.generateLoggedIn(response);
                     break;
-            }*/
+                case "buy":
+
+                    break;
+
             }
         }
+
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /*

@@ -9,19 +9,22 @@ import javax.servlet.http.HttpServletResponse;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author frizz
  */
-public class PageCreateUser 
-{
-    public static void CreateUser(HttpServletRequest request,HttpServletResponse response) throws IOException
-    {
+public class PageCreateUser {
+
+    public static void CreateUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
         Data_access acc = new Data_access();
-       
-        try (PrintWriter out = response.getWriter())
-        {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        try {
+            acc.createUser(username, password);
+        } catch (Exception e) {
+        }
+
+        try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -29,20 +32,8 @@ public class PageCreateUser
             out.println("<title>Servlet lol</title>");
             out.println("</head>");
             out.println("<body>");
-<<<<<<< HEAD
-            out.println("<h1>Main landing page!</h1>");
-            
-=======
             out.println("<h1>You have created a new user!</h1>");
-                        String username = request.getParameter("username");
-            String password = request.getParameter("password");
-            try {
-            acc.createUser(username, password);
-                
-            } catch (Exception e) {
-            }
->>>>>>> 62e30030bd8fd39da6607307dcb0d4ea206ec7fa
-            out.println("<p><a href=\"/exercise1recipes/lol?action=buy\">Buy something</a></p>");
+            out.println("<p><a href=\"/exercise1recipes/lol?action=main\">Return to main page</a></p>");
             out.println("</body>");
             out.println("</html>");
         }

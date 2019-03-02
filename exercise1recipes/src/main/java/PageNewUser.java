@@ -26,7 +26,7 @@ public class PageNewUser {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Make a new User!</h1>");
-            out.println("<p><a href=\"/exercise1recipes/lol?action=newuser\">Log in</a></p>");
+           // out.println("<p><a href=\"/exercise1recipes/lol?action=newuser\">Log in</a></p>");
             out.println("<form method=\"GET\">" //post
                     + "Username:<br>"
                     + "<input type=\"text\" name=\"username\" value=\"\"><br>"
