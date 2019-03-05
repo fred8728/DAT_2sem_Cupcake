@@ -6,20 +6,20 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
  *
  * @author Tobias
  */
-public class PageLoggedIn
-{
+public class PageLoggedIn {
 
-    public static void generateLoggedIn(HttpServletResponse response) throws IOException
-    {
-        
-        try (PrintWriter out = response.getWriter())
-        {
+    public static void generateLoggedIn( HttpServletResponse response) throws IOException {
+
+        try (PrintWriter out = response.getWriter()) {
+            
+            //  else{
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -27,11 +27,20 @@ public class PageLoggedIn
             out.println("<title>Servlet FrontController</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Logged in!</h1>");
-            out.println("<p><a href=\"/exercise1recipes/lol?action=buy\">Buy something</a></p>");
-            out.println("<p><a href=\"/exercise1recipes/lol?action=hello\">Say hello!</a></p>");
+            out.println("<h1>Log in here!</h1>");
+            out.println("<form method=\"GET\">" //post
+                    + "Username:<br>"
+                    + "<input type=\"text\" name=\"username\" value=\"\"><br>"
+                    + "Login:<br>"
+                    + "<input type=\"password\" name=\"password\" value=\"\"><br><br>"
+                    + "<input type=\"hidden\" name=\"action\" value=\"logged-in\">"
+                    + "<input type=\"submit\" value=\"Login\">"
+                    + "</form>");
+
             out.println("</body>");
             out.println("</html>");
+
+            // }
         }
     }
 }

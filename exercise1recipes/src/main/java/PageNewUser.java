@@ -33,7 +33,7 @@ public class PageNewUser {
                     + "Login:<br>"
                     + "<input type=\"password\" name=\"password\" value=\"\"><br><br>"
                     + "<input type=\"hidden\" name=\"action\" value=\"create_user\">"
-                    + "<input type=\"submit\" value=\"Login\">"
+                    + "<input type=\"submit\" value=\"Create User\">"
                     + "</form>");
             out.println("</body>");
             out.println("</html>");

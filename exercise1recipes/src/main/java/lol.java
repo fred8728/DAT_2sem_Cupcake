@@ -66,11 +66,11 @@ public class lol extends HttpServlet {
         String action = request.getParameter("action");
         if (null == action) {
             if (loggedIn == null || !loggedIn) {
-                PageLogin.generateLogin(response);
+                PageMain.generateMain(response);
+                PageLogin.generateLogin(request,response);
                 PageNewUser.generateUser(response);
-
             }
-PageMain.generateMain(response);
+            PageMain.generateMain(response);
             
         } else {
             switch (action) {
@@ -87,8 +87,8 @@ PageMain.generateMain(response);
                     session.setAttribute("loggedIn", true);
                     PageLoggedIn.generateLoggedIn(response);
                     break;
-                case "buy":
-
+                case "logged-in":
+                    PageLogin.generateLogin(request, response);
                     break;
 
             }
