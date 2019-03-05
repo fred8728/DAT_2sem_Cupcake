@@ -18,8 +18,8 @@ public class PageBuy {
     public static void generateBuy(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try (PrintWriter out = response.getWriter()) {
             Data_access acc = new Data_access();
-            String username = request.getParameter("username");
-            String password = request.getParameter("password");
+            String bot = request.getParameter("bot");
+            String top = request.getParameter("top");
             try {
 
 
