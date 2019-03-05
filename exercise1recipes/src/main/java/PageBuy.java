@@ -36,13 +36,13 @@ public class PageBuy {
                     + "<option value=\"0\">Choose bottom</option>\n"
                     + "\n"
                     + "\n"
-                    + "<option value=\"1\">"+ acc.getBottoms()+"</option><option value=\"2\">Blueberry: 5.0</option><option value=\"3\">Raspberry: 5.0</option><option value=\"4\">Crispy: 6.0</option><option value=\"5\">Strawberry: 6.0</option><option value=\"6\">Rum/Raisin: 7.0</option><option value=\"7\">Orange: 8.0</option><option value=\"8\">Lemon: 8.0</option><option value=\"9\">Blue cheese: 9.0</option>\n"
+                    + "<option value=\"1\">"+ acc.getBottoms(1)+"</option><option value=\"2\">"+ acc.getBottoms(2)+"</option><option value=\"3\">"+ acc.getBottoms(3)+"</option><option value=\"4\">"+ acc.getBottoms(4)+"</option><option value=\"5\">"+ acc.getBottoms(5)+"</option><option value=\"6\">"+ acc.getBottoms(6)+"</option><option value=\"7\">"+ acc.getBottoms(7)+"</option><option value=\"8\">"+ acc.getBottoms(8)+"</option><option value=\"9\">"+ acc.getBottoms(9)+"</option>\n"
                     + "</select></td>");
             out.print("<td><select name=\"topping\" id=\"toppingSelect\">\n"
                     + "<option value=\"0\">Choose topping</option>\n"
                     + "\n"
                     + "\n"
-                    + "<option value=\"1\">Chocolate: 5.0</option><option value=\"2\">Vanilla: 5.0</option><option value=\"3\">Nutmeg: 5.0</option><option value=\"4\">Pistacio: 6.0</option><option value=\"5\">Almond: 7.0</option>\n"
+                    + "<option value=\"1\">"+ acc.getTops(1)+"</option><option value=\"2\">"+ acc.getTops(2)+"</option><option value=\"3\">"+ acc.getTops(3)+"</option><option value=\"4\">"+ acc.getTops(4)+"</option><option value=\"5\">"+ acc.getTops(5)+"</option>\n"
                     + "</select></td>\n"
                     + "<td><input type=\"text\" name=\"qty\" placeholder=\"quantity\" id=\"qtyInput\"></td>\n"
                     + "<td><input type=\"submit\" name=\"submit\" value=\"Add to cart\"></td><td><span id=\"errorContainer\"></span></td>");
