@@ -93,6 +93,44 @@ public class Data_access {
         return done; 
 }
     
+    public int getPriceTop(int id) throws Exception
+    {
+         DBConnector conn = new DBConnector();
+        Statement statement = conn.getConnection().createStatement();
+        String query
+                = "SELECT * FROM CUPCAKE_TOP "
+                + "WHERE CUPCAKETOP_ID = " + id + "; ";
+
+        ResultSet rs = statement.executeQuery(query);
+        
+        int price = 0;
+        
+        while (rs.next()) {
+            price = rs.getInt("PRICE");
+            
+        }
+        return price;
+    }
+    
+        public int getPriceBot(int id) throws Exception
+    {
+         DBConnector conn = new DBConnector();
+        Statement statement = conn.getConnection().createStatement();
+        String query
+                = "SELECT * FROM CUPCAKE_BOT "
+                + "WHERE CUPCAKEBOT_ID = " + id + "; ";
+
+        ResultSet rs = statement.executeQuery(query);
+        
+        int price = 0;
+        
+        while (rs.next()) {
+            price = rs.getInt("PRICE");
+            
+        }
+        return price;
+    }
+    
     public String getTops(int id) throws Exception
     {
         DBConnector conn = new DBConnector();
@@ -107,8 +145,6 @@ public class Data_access {
         String first = "";
         String second = "";
         String done = "";
-
-        
         
         while (rs.next()) {
             topping = rs.getString("TOPPINGS");
