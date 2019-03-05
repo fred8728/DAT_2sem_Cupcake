@@ -36,18 +36,17 @@ public class Main {
         
         
         
-        System.out.println("List of bottoms:");
-        List bots = accessor.getBottoms(2);
-        System.out.println(bots.toString());
-        /*for (Cupcake ce : cups){
-            System.out.println(ce.toString());*/
+        System.out.println("bottoms of id:");
+        
+        System.out.println(accessor.getBottoms(2));
+        
         
         
         System.out.println("________________________________");
         
-        System.out.println("List of topzz:");
-        List topz = accessor.getTops(3);
-        System.out.println(topz.toString());
+        System.out.println("tops of id:");
+        
+        System.out.println(accessor.getTops(3));
         
          System.out.println("________________________________");
          

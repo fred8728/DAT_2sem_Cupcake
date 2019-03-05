@@ -67,7 +67,7 @@ public class Data_access {
         return (ArrayList<Cupcake>) cupcakes;
     }
 
-    public List getBottoms(int id) throws Exception {
+    public String getBottoms(int id) throws Exception {
         DBConnector conn = new DBConnector();
             Statement statement = conn.getConnection().createStatement();
         
@@ -77,18 +77,23 @@ public class Data_access {
 
         ResultSet rs = statement.executeQuery(query);
         String bottom = "";
-
-        List bottoms = new ArrayList();
+        int price = 0;
+        String first = "";
+        String second = "";
+        String done = "";
+        
         
         while (rs.next()) {
             bottom = rs.getString("BOTTOM");
-            
-            bottoms.add(bottom);
+            price = rs.getInt("PRICE");
+            first = bottom.toString();
+            second = String.valueOf(price);
+            done = first + " " + second;
             }
-        return bottoms; 
+        return done; 
 }
     
-    public List getTops(int id) throws Exception
+    public String getTops(int id) throws Exception
     {
         DBConnector conn = new DBConnector();
         Statement statement = conn.getConnection().createStatement();
@@ -98,15 +103,23 @@ public class Data_access {
 
         ResultSet rs = statement.executeQuery(query);
         String topping = "";
+        int price = 0;
+        String first = "";
+        String second = "";
+        String done = "";
 
-        List top = new ArrayList();
         
-            while (rs.next()) {
-                topping = rs.getString("TOPPINGS");
+        
+        while (rs.next()) {
+            topping = rs.getString("TOPPINGS");
+            price = rs.getInt("PRICE");
+            first = topping.toString();
+            second = String.valueOf(price);
+            done = first + " " + second;
             
-                top.add(topping);
-            }
-        return top; 
+                
+        }
+        return done; 
     }
 
 public User getUser(String username) throws Exception {
