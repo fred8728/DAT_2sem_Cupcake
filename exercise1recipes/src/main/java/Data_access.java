@@ -140,7 +140,7 @@ public User getUser(String username) throws Exception {
         String query
                 = "insert into USERS "
                 + "values "
-                + "('" + username + "', '" + password + "', '" + 0 + "');";
+                + "('" + username + "', '" + password + "',0);";
         statement.executeUpdate(query);
     }
     
