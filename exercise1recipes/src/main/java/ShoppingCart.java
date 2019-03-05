@@ -1,6 +1,8 @@
 
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -14,9 +16,9 @@ import java.sql.Statement;
  */
 public class ShoppingCart {
     Data_access accessor = new Data_access();
-    //LineItems lineQ = new LineItems();
     
-    //List orders = 
-
+    
+    List <LineItems> orders = new ArrayList();
+    
     
 }
