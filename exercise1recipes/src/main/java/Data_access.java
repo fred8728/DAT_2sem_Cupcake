@@ -195,6 +195,16 @@ public User getUser(String username) throws Exception {
         statement.executeUpdate(query);
     }
     
+        public void sendOrderToDB(int INVOICE_ID, int CUPCAKETOP_ID, int CUPCAKEBOT_ID, int AMOUNT) throws Exception {
+        DBConnector conn = new DBConnector();
+        Statement statement = conn.getConnection().createStatement();
+        String query
+                = "insert into ORDERLINE "
+                + "values "
+                + "(" + INVOICE_ID + ", " + CUPCAKETOP_ID + ", " + CUPCAKEBOT_ID + ", " + AMOUNT + ", NOW());";
+        statement.executeUpdate(query);
+    }
+    
     public boolean comparePassword(String username, String password) throws Exception
     {
         DBConnector conn = new DBConnector();

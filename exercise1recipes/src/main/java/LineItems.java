@@ -9,11 +9,12 @@
  * @author frizz
  */
 public class LineItems {
-    private String top;
-    private String bot;
+    private int invoiceid;
+    private int top;
+    private int bot;
     private int quantity;
 
-    public LineItems(String top, String bot, int quantity) {
+    public LineItems(int top, int bot, int quantity) {
         this.top = top;
         this.bot = bot;
         this.quantity = quantity;
