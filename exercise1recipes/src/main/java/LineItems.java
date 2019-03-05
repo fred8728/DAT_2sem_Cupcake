@@ -9,5 +9,18 @@
  * @author frizz
  */
 public class LineItems {
+    private String top;
+    private String bot;
+    private int quantity;
+
+    public LineItems(String top, String bot, int quantity) {
+        this.top = top;
+        this.bot = bot;
+        this.quantity = quantity;
+    }
+    
+    
+    
+    
     
 }
