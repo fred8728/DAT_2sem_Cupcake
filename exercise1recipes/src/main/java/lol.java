@@ -90,6 +90,9 @@ public class lol extends HttpServlet {
                 case "logged-in":
                     PageLogin.generateLogin(request, response);
                     break;
+                case "buy":
+                    PageBuy.generateBuy(response);
+                    break;
 
             }
         }
