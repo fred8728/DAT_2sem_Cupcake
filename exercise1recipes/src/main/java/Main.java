@@ -37,7 +37,7 @@ public class Main {
         
         
         System.out.println("List of bottoms:");
-        List bots = accessor.getBottoms();
+        List bots = accessor.getBottoms(2);
         System.out.println(bots.toString());
         /*for (Cupcake ce : cups){
             System.out.println(ce.toString());*/
@@ -46,7 +46,7 @@ public class Main {
         System.out.println("________________________________");
         
         System.out.println("List of topzz:");
-        List topz = accessor.getTops();
+        List topz = accessor.getTops(3);
         System.out.println(topz.toString());
         
          System.out.println("________________________________");
@@ -57,9 +57,9 @@ public class Main {
     
           System.out.println("________________________________");
           
-          System.out.println("create user");
+          //System.out.println("create user");
           
-          accessor.createUser("fred", "lol123");
+          //accessor.createUser("fred", "lol123");
           
        /*       
         DBConnector conn = new DBConnector();

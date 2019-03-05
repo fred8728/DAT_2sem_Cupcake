@@ -67,12 +67,13 @@ public class Data_access {
         return (ArrayList<Cupcake>) cupcakes;
     }
 
-    public List getBottoms() throws Exception {
+    public List getBottoms(int id) throws Exception {
         DBConnector conn = new DBConnector();
             Statement statement = conn.getConnection().createStatement();
         
         String query
-                = "SELECT BOTTON FROM CUPCAKE; ";
+                = "SELECT * FROM CUPCAKE_BOT "
+                + "WHERE CUPCAKEBOT_ID = " + id + "; ";
 
         ResultSet rs = statement.executeQuery(query);
         String bottom = "";
@@ -80,19 +81,20 @@ public class Data_access {
         List bottoms = new ArrayList();
         
         while (rs.next()) {
-            bottom = rs.getString("BOTTON");
+            bottom = rs.getString("BOTTOM");
             
             bottoms.add(bottom);
             }
         return bottoms; 
 }
     
-    public List getTops() throws Exception
+    public List getTops(int id) throws Exception
     {
         DBConnector conn = new DBConnector();
         Statement statement = conn.getConnection().createStatement();
         String query
-                = "SELECT TOPPING FROM CUPCAKE; ";
+                = "SELECT * FROM CUPCAKE_TOP "
+                + "WHERE CUPCAKETOP_ID = " + id + "; ";
 
         ResultSet rs = statement.executeQuery(query);
         String topping = "";
@@ -100,7 +102,7 @@ public class Data_access {
         List top = new ArrayList();
         
             while (rs.next()) {
-                topping = rs.getString("TOPPING");
+                topping = rs.getString("TOPPINGS");
             
                 top.add(topping);
             }
