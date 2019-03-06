@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class PageBuy {
 
-    public static void generateBuy(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public static void generateBuy(HttpServletRequest request, HttpServletResponse response) throws IOException, Exception {
         try (PrintWriter out = response.getWriter()) {
             Data_access acc = new Data_access();
 
@@ -48,7 +48,6 @@ public class PageBuy {
             out.println("</body>");
             out.println("</html>");
                         } catch (Exception e) {
-=======
                 /* TODO output your page here. You may use following sample code. */
                 out.println("<!DOCTYPE html>");
                 out.println("<html>");
@@ -85,8 +84,6 @@ public class PageBuy {
                 int botprice = Integer.parseInt(bot);
                 acc.getPriceBot(botprice);
                 acc.getPriceTop(topprice);
-            } catch (Exception e) {
->>>>>>> 632b0aba6ba8f3cdf36fd8299832c701a9890927
             }
         }
     }

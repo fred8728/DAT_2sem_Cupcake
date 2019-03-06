@@ -57,7 +57,7 @@ public class lol extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, Exception {
         ArrayList<String> list = new ArrayList<>();
         Data_access accessor = new Data_access();
         ArrayList<Integer> num = new ArrayList<>();
@@ -81,7 +81,7 @@ public class lol extends HttpServlet {
                     PageCreateUser.CreateUser(request, response);
                     break;
                 case "main":
-                    PageMain.generateMain(response); 
+                    PageMain.generateMain(response);
                     break;
                 case "login":
                     session.setAttribute("loggedIn", true);
@@ -94,6 +94,10 @@ public class lol extends HttpServlet {
                     PageBuy.generateBuy(request, response);
                     break;
                 case "order":
+                    PageOrder.generateOrder(request, response);
+                    break;
+                case "test":
+                    response.sendRedirect("WEB-INF/Products.jsp");
                     PageOrder.generateOrder(request, response);
                     break;
 
@@ -137,7 +141,11 @@ public class lol extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (Exception ex) {
+            Logger.getLogger(lol.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -151,7 +159,11 @@ public class lol extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (Exception ex) {
+            Logger.getLogger(lol.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
