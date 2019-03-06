@@ -28,8 +28,8 @@ public class PageBuy {
                 out.println("<title>Servlet lol</title>");
                 out.println("</head>");
                 out.println("<body>");
-                out.println("<form id=\"addProduct\" action=\"?action=order\" method=\"POST\">\n"
-                        + "<input type=\"hidden\" name=\"origin\" value=\"addProduct\">\n"
+                out.println("<form id=\"addProduct\" action=\"?action=order\" method=\"GET\">\n"
+                        + "<input type=\"hidden\" name=\"action\" value=\"order\">\n"
                         + "<table class=\"table table-striped\">\n"
                         + "<thead><tr><th>Bottom</th><th>Topping</th><th>Quantity</th><th>Select</th><th></th></tr></thead>\n"
                         + "<tbody>"

@@ -67,11 +67,11 @@ public class lol extends HttpServlet {
         if (null == action) {
             if (loggedIn == null || !loggedIn) {
                 PageMain.generateMain(response);
-                PageLogin.generateLogin(request,response);
+                PageLogin.generateLogin(request, response);
                 PageNewUser.generateUser(response);
             }
             PageMain.generateMain(response);
-            
+
         } else {
             switch (action) {
                 case "newuser":
@@ -91,8 +91,10 @@ public class lol extends HttpServlet {
                     PageLogin.generateLogin(request, response);
                     break;
                 case "buy":
-                    PageBuy.generateBuy(request,response);
-                    
+                    PageBuy.generateBuy(request, response);
+                    break;
+                case "order":
+                    PageOrder.generateOrder(request, response);
                     break;
 
             }
