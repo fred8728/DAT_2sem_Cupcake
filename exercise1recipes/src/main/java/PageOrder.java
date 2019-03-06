@@ -34,16 +34,21 @@ public class PageOrder {
         int quanti = Integer.parseInt(quant);
         String str = "";
         String temp = "";
+        int price = 0;
         try {
             str = acc.getBottoms(bot);
             temp = acc.getTops(top);
+            price = acc.getPriceBot(bot) + acc.getPriceTop(top);
         } catch (Exception e) {
         }
+        int total = quanti * price;
         String name = str.replace("6", "with ");
         String topp = temp.replace("6", "");
         String namee = name.replace("5", "with ");
         String toppp = topp.replace("5", "");
         String finish = namee + toppp;
+        
+        
 
         liner = new LineItems(top, bot, quanti);
         shopperz.addToList(liner);
@@ -62,7 +67,7 @@ public class PageOrder {
             out.println("<body>");
             out.println("<h1>Your order is done!</h1>");
 
-            out.println(" <table class=\"table table-striped\"><thead><tr><th>Name</th><th>Quantity</th><th>Price</th><th>Total</th><th>Remove</th></tr></thead><tbody><tr><td>" + finish + "</td><td>" + quant + "</td><td>10.0</td><td class=\"lineprice\">210.0</td><td><form action=\"Control\" method=\"POST\"><input type=\"hidden\" name=\"origin\" value=\"removeLine\"><input type=\"hidden\" name=\"lineId\" value=\"473\"><input type=\"submit\"value=\"remove\"></form></td></tr><tr><td><h4>Total price</h4></td><td></td><td></td><td id=\"totalprice\"></td><td><form id=\"checkoutForm\" action=\"Control\" method=\"POST\"><input type=\"hidden\" name=\"origin\" value=\"submitInvoice\"/><input type=\"submit\" value=\"Check out your order\"></form></td></tr>\n"
+            out.println(" <table class=\"table table-striped\"><thead><tr><th>Name</th><th>Quantity</th><th>Price</th><th>Total</th><th>Remove</th></tr></thead><tbody><tr><td>" + finish + "</td><td>" + quant + "</td><td>"+ price +"</td><td class=\"lineprice\">" + total + "</td><td><form action=\"Control\" method=\"POST\"><input type=\"hidden\" name=\"origin\" value=\"removeLine\"><input type=\"hidden\" name=\"lineId\" value=\"473\"><input type=\"submit\"value=\"remove\"></form></td></tr><tr><td><h4>Total price</h4></td><td></td><td></td><td id=\"totalprice\"></td><td><form id=\"checkoutForm\" action=\"Control\" method=\"POST\"><input type=\"hidden\" name=\"origin\" value=\"submitInvoice\"/><input type=\"submit\" value=\"Check out your order\"></form></td></tr>\n"
                     + "                        </tbody>\n"
                     + "                    </table>");
             out.println("<p><a href=\"/exercise1recipes/lol?action=main\">Return to main page!</a></p>");
