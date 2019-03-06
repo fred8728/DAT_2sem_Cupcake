@@ -20,8 +20,6 @@ public class PageBuy {
             Data_access acc = new Data_access();
 
             try {
-
-<<<<<<< HEAD
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");

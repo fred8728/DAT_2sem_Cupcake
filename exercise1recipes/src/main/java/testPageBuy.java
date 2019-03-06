@@ -10,6 +10,6 @@
  */
 class testPageBuy {
     
-    request.getRequestDispatcher("view.jsp")
+    //request.getRequestDispatcher("view.jsp");
     
 }
