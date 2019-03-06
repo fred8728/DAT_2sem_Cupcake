@@ -23,8 +23,13 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+        
+        
     </head>
     <body>
+        {
+        backround-image: url("");
+        }
         <h1>Select the cucpcake you wish to order:</h1>
 
         <div> 
@@ -36,6 +41,7 @@
                 <th> <td> <td><select name=\"bottom\" id=\"bottomSelect\">\n</td> </td> <td> <td> <select name=\"bottom\" id=\"bottomSelect\">\n</td> </td></tr> </th> </table> 
                 --%>
                 <table border="2px" width="40%">
+                    
                 <tr> <th> Cupcake Top </th> <th> Cupcake bottom </th> <th> Amount </th>  <th> Comfirm </th>  </tr>
                 <tr>  <td> <select name=\"bottom\" id=\"bottomSelect\"> </td> <td> <select name=\"bottom\" id=\"bottomSelect\">
                     </td> <td> <select name=\"bottom\" id=\"bottomSelect\"></td> <td><button>Click here</button></td> </tr>
