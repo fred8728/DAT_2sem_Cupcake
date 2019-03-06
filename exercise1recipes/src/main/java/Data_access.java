@@ -189,9 +189,9 @@ public User getUser(String username) throws Exception {
         DBConnector conn = new DBConnector();
         Statement statement = conn.getConnection().createStatement();
         String query
-                = "insert into USERS "
+                = "insert into USERS (USERNAME, PASSWORD, BALANCE, MAIL)"
                 + "values "
-                + "('" + username + "', '" + password + "',0);";
+                + "('" + username + "', '" + password + "',0 , 'botmail123');";
         statement.executeUpdate(query);
     }
     
