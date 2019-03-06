@@ -36,13 +36,17 @@ public class PageBuy {
                     + "<option value=\"0\">Choose bottom</option>\n"
                     + "\n"
                     + "\n"
-                    + "<option value=\"1\">"+ acc.getBottoms(1)+"</option><option value=\"2\">"+ acc.getBottoms(2)+"</option><option value=\"3\">"+ acc.getBottoms(3)+"</option><option value=\"4\">"+ acc.getBottoms(4)+"</option><option value=\"5\">"+ acc.getBottoms(5)+"</option><option value=\"6\">"+ acc.getBottoms(6)+"</option><option value=\"7\">"+ acc.getBottoms(7)+"</option><option value=\"8\">"+ acc.getBottoms(8)+"</option><option value=\"9\">"+ acc.getBottoms(9)+"</option>\n"
+                    + "<option value=\"1\">"+ acc.getBottoms(1)+"</option><option value=\"2\">"+ acc.getBottoms(2)+"</option><option value=\"3\">"+ acc.getBottoms(3)+
+                    "</option><option value=\"4\">"+ acc.getBottoms(4)+"</option><option value=\"5\">"+ acc.getBottoms(5)+"</option><option value=\"6\">"+ acc.getBottoms(6)+
+                    "</option><option value=\"7\">"+ acc.getBottoms(7)+"</option><option value=\"8\">"+ acc.getBottoms(8)+"</option><option value=\"9\">"+ acc.getBottoms(9)+
+                    "</option>\n"
                     + "</select></td>");
             out.print("<td><select name=\"topping\" id=\"toppingSelect\">\n"
                     + "<option value=\"0\">Choose topping</option>\n"
                     + "\n"
                     + "\n"
-                    + "<option value=\"1\">"+ acc.getTops(1)+"</option><option value=\"2\">"+ acc.getTops(2)+"</option><option value=\"3\">"+ acc.getTops(3)+"</option><option value=\"4\">"+ acc.getTops(4)+"</option><option value=\"5\">"+ acc.getTops(5)+"</option>\n"
+                    + "<option value=\"1\">"+ acc.getTops(1)+"</option><option value=\"2\">"+ acc.getTops(2)+"</option><option value=\"3\">"+ 
+                    acc.getTops(3)+"</option><option value=\"4\">"+ acc.getTops(4)+"</option><option value=\"5\">"+ acc.getTops(5)+"</option>\n"
                     + "</select></td>\n"
                     + "<td><input type=\"text\" name=\"qty\" placeholder=\"quantity\" id=\"qtyInput\"></td>\n"
                     + "<td><input type=\"submit\" name=\"submit\" value=\"Add to cart\"></td><td><span id=\"errorContainer\"></span></td>");
