@@ -81,7 +81,7 @@ public class lol extends HttpServlet {
                     PageCreateUser.CreateUser(request, response);
                     break;
                 case "main":
-                    PageMain.generateMain(response);
+                    PageMain.generateMain(response); 
                     break;
                 case "login":
                     session.setAttribute("loggedIn", true);
