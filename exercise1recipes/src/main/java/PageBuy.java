@@ -28,6 +28,7 @@ public class PageBuy {
                 out.println("<title>Servlet lol</title>");
                 out.println("</head>");
                 out.println("<body>");
+                out.println("<h2>Compose cupcakes from 1 bottom and 1 top and add to shopping cart</h2>");
                 out.println("<form id=\"addProduct\" action=\"?action=order\" method=\"GET\">\n"
                         + "<input type=\"hidden\" name=\"action\" value=\"order\">\n"
                         + "<table class=\"table table-striped\">\n"
