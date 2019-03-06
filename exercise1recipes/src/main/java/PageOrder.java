@@ -37,7 +37,7 @@ public class PageOrder {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Your order is done!</h1>");
-
+            out.println("<p><a href=\"/exercise1recipes/lol?action=main\">Return to main page!</a></p>");
             out.println("</body>");
             out.println("</html>");
         }
