@@ -1,6 +1,7 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -18,16 +19,29 @@ public class PageOrder {
     public static void generateOrder(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         Data_access acc = new Data_access();
-        LineItems liner = null;
-        ShoppingCart shopper = null;
-        String username = request.getParameter("bottom");
-        String password = request.getParameter("topping");
+     //   LineItems liner = null;
+        //ShoppingCart shopper = new ArrayList<>;
+        String bottom = request.getParameter("bottom");
+        String topping = request.getParameter("topping");
         String quant = request.getParameter("qty");
-        int bot = Integer.parseInt(username);
-        int top = Integer.parseInt(password);
+        int bot = Integer.parseInt(bottom);
+        int top = Integer.parseInt(topping);
         int quanti = Integer.parseInt(quant);
-        liner = new LineItems(top, bot, quanti);
-        shopper.addToList(liner);
+        String str ="";
+        String temp ="";
+       LineItems liner = new LineItems(top, bot, quanti);
+     //   shopper.addToList(liner);
+     try {
+           str= acc.getBottoms(bot);
+           temp= acc.getTops(top);
+        } catch (Exception e) {
+        }
+     String name = str.replace("6", "with ");
+     String topp = temp.replace("6", "");
+     String namee = name.replace("5", "with ");
+     String toppp = topp.replace("5", "");     
+     String finish = namee + toppp;
+     
         try {
             acc.sendOrderToDB(bot, top, quanti);
         } catch (Exception e) {
@@ -41,7 +55,11 @@ public class PageOrder {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Your order is done!</h1>");
-            out.println("<p><a href=\"/exercise1recipes/lol?action=main\">Return to main page!</a></p>");
+
+                            out.println(" <table class=\"table table-striped\"><thead><tr><th>Name</th><th>Quantity</th><th>Price</th><th>Total</th><th>Remove</th></tr></thead><tbody><tr><td>" + finish + "</td><td>" + quant +"</td><td>10.0</td><td class=\"lineprice\">210.0</td><td><form action=\"Control\" method=\"POST\"><input type=\"hidden\" name=\"origin\" value=\"removeLine\"><input type=\"hidden\" name=\"lineId\" value=\"473\"><input type=\"submit\"value=\"remove\"></form></td></tr><tr><td><h4>Total price</h4></td><td></td><td></td><td id=\"totalprice\"></td><td><form id=\"checkoutForm\" action=\"Control\" method=\"POST\"><input type=\"hidden\" name=\"origin\" value=\"submitInvoice\"/><input type=\"submit\" value=\"Check out your order\"></form></td></tr>\n" +
+"                        </tbody>\n" +
+"                    </table>");
+                                        out.println("<p><a href=\"/exercise1recipes/lol?action=main\">Return to main page!</a></p>");
             out.println("</body>");
             out.println("</html>");
         }
