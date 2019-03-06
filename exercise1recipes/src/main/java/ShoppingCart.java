@@ -20,5 +20,15 @@ public class ShoppingCart {
     
     List <LineItems> orders = new ArrayList();
     
+    public void addToList(LineItems lineitems)
+    {
+        orders.add(lineitems);
+    }
+    
+    public List returnListOfOrders()
+    {
+        return orders;
+    }
+    
     
 }

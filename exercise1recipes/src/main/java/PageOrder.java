@@ -18,12 +18,16 @@ public class PageOrder {
     public static void generateOrder(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         Data_access acc = new Data_access();
+        LineItems liner = null;
+        ShoppingCart shopper = null;
         String username = request.getParameter("bottom");
         String password = request.getParameter("topping");
         String quant = request.getParameter("qty");
         int bot = Integer.parseInt(username);
         int top = Integer.parseInt(password);
         int quanti = Integer.parseInt(quant);
+        liner = new LineItems(top, bot, quanti);
+        shopper.addToList(liner);
         try {
             acc.sendOrderToDB(bot, top, quanti);
         } catch (Exception e) {
