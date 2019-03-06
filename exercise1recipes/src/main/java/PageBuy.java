@@ -28,7 +28,7 @@ public class PageBuy {
                 out.println("<title>Servlet lol</title>");
                 out.println("</head>");
                 out.println("<body>");
-                out.println("<form id=\"addProduct\" action=\"?action=main\" method=\"POST\">\n"
+                out.println("<form id=\"addProduct\" action=\"?action=order\" method=\"POST\">\n"
                         + "<input type=\"hidden\" name=\"origin\" value=\"addProduct\">\n"
                         + "<table class=\"table table-striped\">\n"
                         + "<thead><tr><th>Bottom</th><th>Topping</th><th>Quantity</th><th>Select</th><th></th></tr></thead>\n"
@@ -51,7 +51,7 @@ public class PageBuy {
                         + "</form>");
                 out.println("</body>");
                 out.println("</html>");
-                String bot = request.getParameter("bottom");
+                String bot = request.getParameter("bottomSelect");
                 String top = request.getParameter("topping");
                 int topprice = Integer.parseInt(top);
                 int botprice = Integer.parseInt(bot);
