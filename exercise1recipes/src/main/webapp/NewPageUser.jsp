@@ -23,7 +23,7 @@
         <title>New login Page</title>
     </head>
     <body>
-        <h1>>Make a new User</h1>
+        <h1>Make a new User</h1>
 
         <form method=\"GET\">
             Username:<br>
