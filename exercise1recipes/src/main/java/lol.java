@@ -67,7 +67,7 @@ public class lol extends HttpServlet {
         if (null == action) {
             if (loggedIn == null || !loggedIn) {
                 main(request, response);
-                PageMain.generateMain(response);
+                //PageMain.generateMain(response);
                 PageLogin.generateLogin(request, response);
                 PageNewUser.generateUser(response);
             }

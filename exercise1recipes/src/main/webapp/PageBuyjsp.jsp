@@ -3,30 +3,29 @@
     Created on : 07-03-2019, 10:36:07
     Author     : emils
 --%>
-<% Data_access acc = new Data_access();%>
+<%@page import="java.io.PrintWriter"%>
+<%@page import="java.io.IOException"%>
+<%! Data_access acc = new Data_access();%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        
-                   
+
+          <%!     public static void generateBuy(HttpServletRequest request, HttpServletResponse response) throws IOException, Exception {
+        try (PrintWriter out = response.getWriter()) {
+            Data_access acc = new Data_access();
 
             try {
-
-          <td><select name=bottom id=bottomSelect>
-                    <option value=0>Choose bottom</option>
-                    
-                  
-                    <option value=1><% acc.getBottoms(1); %></option><option value=2><%acc.getBottoms(2);%></option><option value=3><%acc.getBottoms(3)%>
-                    </option>
-                    <option value=4>
-                        <% acc.getBottoms(4);%><div>
-                    </div></option>
-                    <option value=\"5\"><% acc.getBottoms(5);%></option><option value=\"6\"><% acc.getBottoms(6);%>
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet FrontController</title>");
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<td><select name=\"bottom\" id=\"bottomSelect\">\n"
+                    + "<option value=\"0\">Choose bottom</option>\n"
+                    + "\n"
+                    + "\n"
+                    + "<option value=\"1\">"+ acc.getBottoms(1)+"</option><option value=\"2\">"+ acc.getBottoms(2)+"</option><option value=\"3\">"+ acc.getBottoms(3)+
+                    "</option><option value=\"4\">"+ acc.getBottoms(4)+"</option><option value=\"5\">"+ acc.getBottoms(5)+"</option><option value=\"6\">"+ acc.getBottoms(6)+
                     "</option><option value=\"7\">"+ acc.getBottoms(7)+"</option><option value=\"8\">"+ acc.getBottoms(8)+"</option><option value=\"9\">"+ acc.getBottoms(9)+
                     "</option>\n"
                     + "</select></td>");
@@ -42,7 +41,13 @@
             out.println("</body>");
             out.println("</html>");
                         } catch (Exception e) {
-                
+
+                out.println("<!DOCTYPE html>");
+                out.println("<html>");
+                out.println("<head>");
+                out.println("<title>Servlet lol</title>");
+                out.println("</head>");
+                out.println("<body>");
                 out.println("<h2>Compose cupcakes from 1 bottom and 1 top and add to shopping cart</h2>");
                 out.println("<form id=\"addProduct\" action=\"?action=order\" method=\"GET\">\n"
                         + "<input type=\"hidden\" name=\"action\" value=\"order\">\n"
@@ -53,7 +58,7 @@
                         + "<option value=\"0\">Choose bottom</option>\n"
                         + "\n"
                         + "\n"
-                        + "<option value=\"1\">" + <%acc.getBottoms(1);%> + "</option><option value=\"2\">" + acc.getBottoms(2) + "</option><option value=\"3\">" + acc.getBottoms(3) + "</option><option value=\"4\">" + acc.getBottoms(4) + "</option><option value=\"5\">" + acc.getBottoms(5) + "</option><option value=\"6\">" + acc.getBottoms(6) + "</option><option value=\"7\">" + acc.getBottoms(7) + "</option><option value=\"8\">" + acc.getBottoms(8) + "</option><option value=\"9\">" + acc.getBottoms(9) + "</option>\n"
+                        + "<option value=\"1\">" + acc.getBottoms(1) + "</option><option value=\"2\">" + acc.getBottoms(2) + "</option><option value=\"3\">" + acc.getBottoms(3) + "</option><option value=\"4\">" + acc.getBottoms(4) + "</option><option value=\"5\">" + acc.getBottoms(5) + "</option><option value=\"6\">" + acc.getBottoms(6) + "</option><option value=\"7\">" + acc.getBottoms(7) + "</option><option value=\"8\">" + acc.getBottoms(8) + "</option><option value=\"9\">" + acc.getBottoms(9) + "</option>\n"
                         + "</select></td>");
                 out.print("<td><select name=\"topping\" id=\"toppingSelect\">\n"
                         + "<option value=\"0\">Choose topping</option>\n"
@@ -73,7 +78,7 @@
                 int botprice = Integer.parseInt(bot);
                 acc.getPriceBot(botprice);
                 acc.getPriceTop(topprice);
-        
-        
-    </body>
-</html>
+            }
+        }
+    }
+} %>
