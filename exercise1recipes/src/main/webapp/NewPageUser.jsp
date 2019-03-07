@@ -33,10 +33,7 @@
             
             <input type=hidden name=action value=create_user>
             <input type=submit value=Create User>
-            <%--"<input type=\"hidden\" name=\"action\" value=\"create_user\">"
-                    + "<input type=\"submit\" value=\"Create User\">" --%>
             <br>
-            <button type=create_user> Create User</button>
         </form>
     </body>
 </html>
