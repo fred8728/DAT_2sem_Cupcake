@@ -60,9 +60,9 @@
             <h1 style= "font-size:20px; font-family:tahoma; text-align:center;"><b>Username:</b></h1>
             <p align ="center"><input type=text name=username value=></p>
             <h1 style= "font-size:20px; font-family:tahoma; text-align:center;"><b>Password:</b></h1>
-            <p align="center"><input type=password name=password align=center value=></p>
-            <p align="center"><input type=hidden name=action value=create_user align=center></p>
-            <p align="center"><input type=submit value=Create User align=center></p>
+            <p align="center"><input type=password name=password value=></p>
+            <p align="center"><input type=hidden name=action value=create_user></p>
+            <p align="center"><input type=submit value=Create User></p>
             <br>
             <div id ="foot"><i> Cupcake-Huset: Amerikavej 21 -  DK – 1756 København V - CVR-nr.: 87654321</i> </div>
         </form>
