@@ -25,9 +25,9 @@
     <body>
         <h1>Main landing page</h1>
 
-        <p><a href=\"/exercise1recipes/lol?action=newuser\">Create new user!</a></p> <br>
-        <p><a href=\"/exercise1recipes/lol?action=buy\">Buy something</a></p> <br>
-        <p><a href=\"/exercise1recipes/lol?action=login\">Log in here!</a></p>
+        <p><a href=\exercise1recipes/lol?action=newuser>Create new user!</a></p> <br>
+        <p><a href=\exercise1recipes/lol?action=buy>Buy something</a></p> <br>
+        <p><a href=\exercise1recipes/lol?action=login>Log in here!</a></p>
 
     </body>
 </html>
