@@ -97,9 +97,10 @@ public class lol extends HttpServlet {
                     PageOrder.generateOrder(request, response);
                     break;
                 case "test":
-                    response.sendRedirect("WEB-INF/Products.jsp");
-                    PageOrder.generateOrder(request, response);
+                    response.sendRedirect("pageMain.jsp"); // setup to link to a .jsp file
+                   // PageOrder.generateOrder(request, response);
                     break;
+                
 
             }
         }
