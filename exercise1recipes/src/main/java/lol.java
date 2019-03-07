@@ -81,7 +81,8 @@ public class lol extends HttpServlet {
                     PageCreateUser.CreateUser(request, response);
                     break;
                 case "main":
-                    PageMain.generateMain(response); 
+                    test(request, response);
+                 //   PageMain.generateMain(response); 
                     break;
                 case "login":
                     session.setAttribute("loggedIn", true);
@@ -99,6 +100,8 @@ public class lol extends HttpServlet {
 
             }
         }
+        
+        
 
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
@@ -123,6 +126,13 @@ public class lol extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
              */ }
+    }
+    private void test(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        //String username = request.getParameter("username");
+        
+        //request.getSession().setAttribute("username", username);
+        
+        request.getRequestDispatcher("PageMainjsp.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
