@@ -16,7 +16,26 @@ and open the template in the editor.
     
 }
 body{
-    
-    background-color: lightgreen
-    
-}
+                background-color: lightgoldenrodyellow;
+                margin: 80px 80px 100px 100px;
+            }
+            div#head{
+                position: fixed;
+                top: 0px; 
+                left: 0px;
+                width: 100%;
+                color: #333;
+                background: darkkhaki;
+                padding: 25px; 
+            }
+            div#foot{
+                position: fixed;
+                bottom: 0px;
+                left: 0px;
+                width: 100%;
+                color: #33;
+                background: darkkhaki;
+                padding: 8px;
+                    
+                    
+            }

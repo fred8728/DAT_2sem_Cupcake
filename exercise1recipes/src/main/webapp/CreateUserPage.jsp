@@ -22,7 +22,7 @@
         <title>JSP Page</title>
         <style>
             body{
-         background-color: lightgoldenrodyellow
+         background-color: antiquewhite
         }
             
         </style>

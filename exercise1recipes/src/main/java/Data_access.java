@@ -93,6 +93,18 @@ public class Data_access {
         return done; 
 }
     
+    public void changeUserBalance(int totalprice, String username) throws Exception
+    {
+        DBConnector conn = new DBConnector();
+            Statement statement = conn.getConnection().createStatement();
+        
+        String query
+                = "UPDATE USERS"
+                + "SET BALANCE = BALANCE-" + totalprice 
+                + " WHERE USERNAME = '" + username + "'; ";
+      
+    }
+    
     public int getPriceTop(int id) throws Exception
     {
          DBConnector conn = new DBConnector();

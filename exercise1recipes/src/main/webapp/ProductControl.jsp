@@ -27,13 +27,11 @@
         
     </head>
     <body>
-        {
-        backround-image: url("");
-        }
+       
         <h1>Select the cucpcake you wish to order:</h1>
-
+                <%String bob="helo"; %> 
         <div> 
-            <p>hello there bud, wanna order a cup cake?</p>
+            <p>hello there bud, wanna order a cup cake? </p>
 
 
            <%--  <table style="width:50%"> <tr> <td> Top </td>  <td> Bottom </td> <td> Amount </td></tr>
