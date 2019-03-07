@@ -95,9 +95,9 @@ public class lol extends HttpServlet {
                     PageLogin.generateLogin(request, response);
                     break;
                 case "buy":
-                    //buy(request, response);
+                    buy(request, response);
                     
-                    PageBuy.generateBuy(request, response);
+                    //PageBuy.generateBuy(request, response);
                     break;
                 case "order":
                     PageOrder.generateOrder(request, response);
