@@ -1,7 +1,6 @@
 <%-- 
     Document   : PageLogin
-    Created on : 07-03-2019, 11:04:54
-    Author     : fskn
+
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
