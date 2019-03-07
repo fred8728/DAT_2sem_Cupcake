@@ -48,7 +48,8 @@
         <div id ="head"> simone 1 </div>
         
         <h1 class = "Arial"> You have created a new user!</h1>
-        
+        <img src="https://truffle-assets.imgix.net/pxqrocxwsjcc_4mlylloieeiqmyecgk0qq8_rose%CC%81-champagne-cupcakes-landscape-no-graphic.jpg" alt="Trulli" width="200" height="222">
+        <img src="https://brest.maville.com/recettes/sites/maville.com.recettes/files/styles/normale/public/field/image/recette/P0D2353121G_0.jpg?itok=AaQcIme2" alt ="Trulli" width ="200" height="222">
         <p><a href=\exercise1recipes/lol?action=main>Return to main page</a></p>
         <div id ="foot"> Cupcake-Huset: Amerikavej 21 -  DK – 1756 København V - CVR-nr.: 87654321 </div>
         
