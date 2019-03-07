@@ -45,13 +45,10 @@
                 <table border=2px width=40%>
                     
                 <tr> <th> Cupcake Top </th> <th> Cupcake bottom </th> <th> Amount </th>  <th> Comfirm </th>  </tr>
-<<<<<<< HEAD
+
                 <tr>  <td> <select name=\"bottom\" id="option"><option value=\"1\"><%= acc.getTops(1) %></option><option value=\"2\"><%= acc.getTops(2) %></option> </td> <td> <select name=\"bottom\" id=\"bottomSelect\">
                     </td> <td> <select name=\"bottom\" id=\"bottomSelect\"></td> <td><button>Click here</button></td> </tr>
-=======
-                <tr>  <td> <select name=bottom id=\"bottomSelect> </td> <td> <select name=bottom id=\"bottomSelect>
-                    </td> <td> <select name=bottom id=\"bottomSelect></td> <td><button>Click here</button></td> </tr>
->>>>>>> 122a328f98287294e54b1292a7488ee732693cd3
+
                 </table>
                     <%-- <td><select name=\"bottom\" id=\"bottomSelect\">\n</td>
                     <%--  <td><input type=\"text\" name=\"qty\" placeholder=\"quantity\" id=\"qtyInput\"></td>
