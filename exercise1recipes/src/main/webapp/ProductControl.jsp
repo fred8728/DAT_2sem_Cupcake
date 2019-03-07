@@ -38,11 +38,11 @@
                <th> <tr> <td> <td><select name=\"bottom\" id=\"bottomSelect\">\n</td> </td>  </th>
                 <th> <td> <td><select name=\"bottom\" id=\"bottomSelect\">\n</td> </td> <td> <td> <select name=\"bottom\" id=\"bottomSelect\">\n</td> </td></tr> </th> </table> 
                 --%>
-                <table border="2px" width="40%">
+                <table border=2px width=40%>
                     
                 <tr> <th> Cupcake Top </th> <th> Cupcake bottom </th> <th> Amount </th>  <th> Comfirm </th>  </tr>
-                <tr>  <td> <select name=\"bottom\" id=\"bottomSelect\"> </td> <td> <select name=\"bottom\" id=\"bottomSelect\">
-                    </td> <td> <select name=\"bottom\" id=\"bottomSelect\"></td> <td><button>Click here</button></td> </tr>
+                <tr>  <td> <select name=bottom id=\"bottomSelect> </td> <td> <select name=bottom id=\"bottomSelect>
+                    </td> <td> <select name=bottom id=\"bottomSelect></td> <td><button>Click here</button></td> </tr>
                 </table>
                     <%-- <td><select name=\"bottom\" id=\"bottomSelect\">\n</td>
                     <%--  <td><input type=\"text\" name=\"qty\" placeholder=\"quantity\" id=\"qtyInput\"></td>
