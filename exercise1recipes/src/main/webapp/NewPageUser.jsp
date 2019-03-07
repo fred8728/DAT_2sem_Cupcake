@@ -27,16 +27,16 @@
 
         <form method=\"GET\">
             Username:<br>
-            <input type=\"text\" name=\"username\" value=><br>
+            <input type=text name=username value=><br>
             Login:<br>
-            <input type=\"password\" name=\"password\" value=><br><br>
+            <input type=password name=password value=><br><br>
             
-            <input type=\"hidden\" name=\"action\" value=\"create_user\">
-            <input type=\"submit\" value=\"Create User>
+            <input type=hidden name=action value=create_user>
+            <input type=submit value=Create User>
             <%--"<input type=\"hidden\" name=\"action\" value=\"create_user\">"
                     + "<input type=\"submit\" value=\"Create User\">" --%>
             <br>
-            <button type="create_user"> Create User</button>
+            <button type=create_user> Create User</button>
         </form>
     </body>
 </html>
