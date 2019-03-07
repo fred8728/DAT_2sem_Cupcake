@@ -30,7 +30,7 @@
     </head>
     <body>
         <h1>You have created a new user!</h1>
-        <p><a href=\"/exercise1recipes/lol?action=main\">Return to main page</a></p>
+        <p><a href=\exercise1recipes/lol?action=main>Return to main page</a></p>
         
         
     </body>

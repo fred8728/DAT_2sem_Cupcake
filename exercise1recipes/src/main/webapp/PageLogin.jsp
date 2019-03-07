@@ -12,8 +12,8 @@
         <title>Page login</title>
     </head>
     <body>
-        <h1>Login!</h1>
-        <p><a href=\"/exercise1recipes/lol?action=login\">Wrong ussername or password</a></p>
-        <p><a href=\"/exercise1recipes/lol?action=newuser\">create new user here?</a></p>
+        <h1>Login!</h1> 
+        <p><a href=\exercise1recipes/lol?action=login>Wrong ussername or password</a></p>
+        <p><a href=\exercise1recipes/lol?action=newuser>create new user here?</a></p>
     </body>
 </html>
