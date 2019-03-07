@@ -57,7 +57,7 @@ public class lol extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, Exception {
         ArrayList<String> list = new ArrayList<>();
         Data_access accessor = new Data_access();
         ArrayList<Integer> num = new ArrayList<>();
@@ -82,7 +82,7 @@ public class lol extends HttpServlet {
                     break;
                 case "main":
                     test(request, response);
-                 //   PageMain.generateMain(response); 
+                    //   PageMain.generateMain(response); 
                     break;
                 case "login":
                     session.setAttribute("loggedIn", true);
@@ -97,11 +97,13 @@ public class lol extends HttpServlet {
                 case "order":
                     PageOrder.generateOrder(request, response);
                     break;
+                case "test":
+                    response.sendRedirect("pageMain.jsp"); // setup to link to a .jsp file
+                    // PageOrder.generateOrder(request, response);
+                    break;
 
             }
         }
-        
-        
 
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
@@ -127,11 +129,11 @@ public class lol extends HttpServlet {
             out.println("</html>");
              */ }
     }
-    private void test(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+
+    private void test(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //String username = request.getParameter("username");
-        
+
         //request.getSession().setAttribute("username", username);
-        
         request.getRequestDispatcher("PageMainjsp.jsp").forward(request, response);
     }
 
@@ -147,7 +149,11 @@ public class lol extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (Exception ex) {
+            Logger.getLogger(lol.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -161,7 +167,11 @@ public class lol extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (Exception ex) {
+            Logger.getLogger(lol.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
