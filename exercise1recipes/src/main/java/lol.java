@@ -66,6 +66,7 @@ public class lol extends HttpServlet {
         String action = request.getParameter("action");
         if (null == action) {
             if (loggedIn == null || !loggedIn) {
+                main(request, response);
                 PageMain.generateMain(response);
                 PageLogin.generateLogin(request, response);
                 PageNewUser.generateUser(response);
@@ -81,18 +82,22 @@ public class lol extends HttpServlet {
                     PageCreateUser.CreateUser(request, response);
                     break;
                 case "main":
-                    test(request, response);
+                    main(request, response);
                     //   PageMain.generateMain(response); 
                     break;
                 case "login":
                     session.setAttribute("loggedIn", true);
-                    PageLoggedIn.generateLoggedIn(response);
+                    loggedin(request,response);
+                    //PageLoggedIn.generateLoggedIn(response);
                     break;
                 case "logged-in":
+                    
                     PageLogin.generateLogin(request, response);
                     break;
                 case "buy":
-                    PageBuy.generateBuy(request, response);
+                    buy(request, response);
+                    
+                    //PageBuy.generateBuy(request, response);
                     break;
                 case "order":
                     PageOrder.generateOrder(request, response);
@@ -130,12 +135,18 @@ public class lol extends HttpServlet {
              */ }
     }
 
-    private void test(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //String username = request.getParameter("username");
-
-        //request.getSession().setAttribute("username", username);
-        request.getRequestDispatcher("PageMainjsp.jsp").forward(request, response);
+    private void main(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("pageMain.jsp").forward(request, response);
     }
+
+    private void loggedin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("PageLoggedin.jsp").forward(request, response);
+    }
+    private void buy(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("PageBuyjsp.jsp").forward(request, response);
+    }
+
+   
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
