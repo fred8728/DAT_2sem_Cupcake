@@ -8,30 +8,49 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel=stylesheet type=text/css href=style.css>
+        <link rel=css/style.css type=style href=style.css>
         <meta http-equiv=Content-Type content=text/html; charset=UTF-8">
          <!-- Latest compiled and minified CSS -->
-        <link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css>
-
-        <!-- jQuery library -->
-        <script src=https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js></script>
-
-        <!-- Latest compiled JavaScript -->
-        <script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js></script> 
+        
 
         <title>JSP Page</title>
         <style>
-            body{
-         background-color: antiquewhite
+        body{
+                background-color: lightpink;
+                margin: 80px;
+                width: 600px;
+                padding: 50px;
         }
-            
+        p.sansserif {
+                font-family: Arial, Helvetica, sans-serif;
+        }
+        div#head{
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                color: #33;
+                background: lightcoral;
+                padding: 15px;  
+        }
+        div#foot{
+                position: fixed;
+                bottom: 0px;
+                left: 0px;
+                width: 100%;
+                color: #33;
+                background: lightcoral;
+                padding: 15px;
+        } 
         </style>
-        
-    </head>
+    </head> 
     <body>
-        <h1>You have created a new user!</h1>
-        <p><a href=\exercise1recipes/lol?action=main>Return to main page</a></p>
+        <div id ="head"> simone 1 </div>
         
+        <h1 class = "Arial"> You have created a new user!</h1>
+        
+        <p><a href=\exercise1recipes/lol?action=main>Return to main page</a></p>
+        <div id ="foot"> Cupcake-Huset: Amerikavej 21 -  DK – 1756 København V - CVR-nr.: 87654321 </div>
         
     </body>
 </html>
