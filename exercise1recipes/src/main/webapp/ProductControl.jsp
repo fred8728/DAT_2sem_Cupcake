@@ -97,7 +97,7 @@
                 <table class="table table-striped">
                     <thead><tr><th>Bottom</th><th>Topping</th><th>Quantity</th><th>Select</th><th></th></tr></thead>
                     <tbody>
-                        <tr> <th> Cupcake Top </th> <th> Cupcake bottom </th> <th> quantity </th>  <th> Confirm </th>  </tr>
+                        <tr> <th> Cupcake Top </th> <th> Cupcake bottom </th> <th> Quantity </th>  <th> Confirm </th>  </tr>
 
                         <tr>  <td> <select name=\"topping\" id="option"><option value=\"1\"><%= acc.getTops(1)%></option><option value=\"2\"><%= acc.getTops(2)%></option><option value=\"3\"><%= acc.getTops(3)%></option>
                                     <option value=4><%= acc.getTops(4)%></option><option value=\"5\"><%= acc.getTops(5)%></option><option value=\"6\"><%= acc.getTops(6)%></option>
