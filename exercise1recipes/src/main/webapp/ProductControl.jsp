@@ -43,22 +43,22 @@
                 <th> <td> <td><select name=\"bottom\" id=\"bottomSelect\">\n</td> </td> <td> <td> <select name=\"bottom\" id=\"bottomSelect\">\n</td> </td></tr> </th> </table> 
                 --%>
 
-                 <form id="addProduct" action="?action=order" method="POST">
-                        <input type="hidden" name="origin" value="addProduct">
+                 <form id="addProduct" action="?action=order" method="GET">
+                        <input type="hidden" name="action" value="order">
                         <table class="table table-striped">
                             <thead><tr><th>Bottom</th><th>Topping</th><th>Quantity</th><th>Select</th><th></th></tr></thead>
                             <tbody>
                                 <tr> <th> Cupcake Top </th> <th> Cupcake bottom </th> <th> quantity </th>  <th> Confirm </th>  </tr>
 
-                <tr>  <td> <select name=\"topping\" id="option"><option value=\"1\"><%= acc.getTops(1) %></option><option value=\"2\"><%= acc.getTops(2) %></option><option value=\"3\"><%= acc.getTops(3) %></option>
+                <tr>  <td> <select name=topping id="option"><option value=1><%= acc.getTops(1) %></option><option value=2><%= acc.getTops(2) %></option><option value=\"3\"><%= acc.getTops(3) %></option>
                            <option value=4><%= acc.getTops(4) %></option><option value=\"5\"><%= acc.getTops(5) %></option><option value=\"6\"><%= acc.getTops(6) %></option>
-                           <option value=\"7\"><%= acc.getTops(7) %></option><option value=\"8\"><%= acc.getTops(8) %></option><option value=\"9\"><%= acc.getTops(9) %></option> </td> 
+                           <option value=7><%= acc.getTops(7) %></option><option value=\"8\"><%= acc.getTops(8) %></option><option value=\"9\"><%= acc.getTops(9) %></option> </td> 
                     
-                    <td> <select name=\"bottom\" id="option"><option value=\"1\"><%= acc.getBottoms(1) %></option><option value=\"2\"><%= acc.getBottoms(2) %></option><option value=\"3\"><%= acc.getBottoms(3) %></option><option value=\"4\"><%= acc.getBottoms(4) %></option><option value=\"5\"><%= acc.getBottoms(5) %></option><option value=\"6\"><%= acc.getBottoms(6) %></option>
+                    <td> <select name=bottom id="option"><option value=1><%= acc.getBottoms(1) %></option><option value=\"2\"><%= acc.getBottoms(2) %></option><option value=\"3\"><%= acc.getBottoms(3) %></option><option value=\"4\"><%= acc.getBottoms(4) %></option><option value=\"5\"><%= acc.getBottoms(5) %></option><option value=\"6\"><%= acc.getBottoms(6) %></option>
                             <option value=\"7\"><%= acc.getBottoms(7) %></option><option value=\"8\"><%= acc.getBottoms(8) %></option><option value=\"9\"><%= acc.getBottoms(9) %></option><option value=\"10\"><%= acc.getBottoms(10) %></option>\"bottomSelect\"></td> 
                                 
                             <td><input type="text" name="qty" placeholder="quantity" id="qtyInput"></td>
-                                    <td><input type="submit" name="submit" value="Add to cart"></td><td><span id="errorContainer"></span></td>
+                                    <td><input type="submit" name="action" value="Add to cart"></td><td><span id="errorContainer"></span></td>
 </tr>
                 </table>
          </form>

@@ -76,7 +76,8 @@ public class lol extends HttpServlet {
         } else {
             switch (action) {
                 case "newuser":
-                    PageNewUser.generateUser(response);
+                    newPageUser(request, response);
+                    //PageNewUser.generateUser(response);
                     break;
                 case "create_user":
                     PageCreateUser.CreateUser(request, response);
@@ -87,17 +88,17 @@ public class lol extends HttpServlet {
                     break;
                 case "login":
                     session.setAttribute("loggedIn", true);
-                    loggedin(request,response);
-                    
+                    loggedin(request, response);
+
                     //PageLoggedIn.generateLoggedIn(response);
                     break;
                 case "logged-in":
-                    login(request,response);
+                    login(request, response);
                     PageLogin.generateLogin(request, response);
                     break;
                 case "buy":
                     buy(request, response);
-                        
+
                     //PageBuy.generateBuy(request, response);
                     break;
                 case "order":
@@ -143,15 +144,19 @@ public class lol extends HttpServlet {
     private void loggedin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("PageLoggedinjsp.jsp").forward(request, response);
     }
+
     private void buy(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("ProductControl.jsp").forward(request, response);
     }
-    
-private void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    private void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("PageLogin.jsp").forward(request, response);
     }
-    
-   
+
+    private void
+            newPageUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("NewPageUser.jsp").forward(request, response);
+    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

@@ -24,7 +24,7 @@ public class PageOrder {
         //ShoppingCart shopper = new ArrayList<>;
         String bottom = request.getParameter("bottom");
         String topping = request.getParameter("topping");
-        LineItems liner = null;
+     //   LineItems liner = null;
         ShoppingCart shopperz = new ShoppingCart();
         String username = request.getParameter("bottom");
         String password = request.getParameter("topping");
@@ -50,8 +50,8 @@ public class PageOrder {
         
         
 
-        liner = new LineItems(top, bot, quanti);
-        shopperz.addToList(liner);
+       // liner = new LineItems(top, bot, quanti);
+       // shopperz.addToList(liner);
 
         try {
             acc.sendOrderToDB(bot, top, quanti);
