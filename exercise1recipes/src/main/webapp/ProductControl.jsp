@@ -14,7 +14,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
         <title>Cupcake Ordering</title>
-        <link href="css/styles.css" rel="stylesheet" type="text/css"/>
 
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -24,6 +23,7 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
         <style>
             body{
                 background-color: lightpink;
@@ -73,19 +73,12 @@
         </table>
 
         <div id ="head"><i style ="font-size:15px; font-family:tahoma; color:white;">A balanced diet is having a cupcake in each hand</i></div
-
-        
-        
-        
         <%TestAccess acc = new TestAccess();%> 
         
         <hr>
         <div> 
             <h1>Select the cupcake you wish to order:</h1>
             <br>
-            <h3>hello there bud, wanna order a cup cake? </h3>
-
-
 
             <%--  <table style="width:50%"> <tr> <td> Top </td>  <td> Bottom </td> <td> Amount </td></tr>
                 <th> <tr> <td> <td><select name=\"bottom\" id=\"bottomSelect\">\n</td> </td>  </th>

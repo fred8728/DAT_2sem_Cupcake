@@ -35,7 +35,28 @@ body{
                 width: 100%;
                 color: #33;
                 background: darkkhaki;
-                padding: 8px;
-                    
-                    
+                padding: 8px;      
             }
+            body{
+                background-color: lightpink;
+                margin: 20px;
+                width: 1450px;
+                padding: 20px;
+            }
+    
+            preview {
+                display: inline-block;
+                margin: 0 40px 0 0;
+            }
+            h1{
+                font-size:40px;
+                font-family:tahoma;
+                text-align:center;
+                color:white; 
+            }
+            p{
+                font-size:25px;
+                font-family:tahoma;
+                text-align:center;
+            }
+            
