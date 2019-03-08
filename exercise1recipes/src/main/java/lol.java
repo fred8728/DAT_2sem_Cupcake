@@ -88,15 +88,16 @@ public class lol extends HttpServlet {
                 case "login":
                     session.setAttribute("loggedIn", true);
                     loggedin(request,response);
+                    
                     //PageLoggedIn.generateLoggedIn(response);
                     break;
                 case "logged-in":
-                    
+                    login(request,response);
                     PageLogin.generateLogin(request, response);
                     break;
                 case "buy":
                     buy(request, response);
-                    
+                        
                     //PageBuy.generateBuy(request, response);
                     break;
                 case "order":
@@ -140,12 +141,16 @@ public class lol extends HttpServlet {
     }
 
     private void loggedin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("PageLoggedin.jsp").forward(request, response);
+        request.getRequestDispatcher("PageLoggedinjsp.jsp").forward(request, response);
     }
     private void buy(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("PageBuyjsp.jsp").forward(request, response);
+        request.getRequestDispatcher("ProductControl.jsp").forward(request, response);
     }
-
+    
+private void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("PageLogin.jsp").forward(request, response);
+    }
+    
    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
