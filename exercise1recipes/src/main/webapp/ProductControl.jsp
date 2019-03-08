@@ -55,19 +55,19 @@
                 display: inline-block;
                 margin: 0 40px 0 0;
             }
-
+            
         </style>
 
     </head>
     <body>
         <table style="width:100%">
             <tr>
-                <th><img src="http://poivrebleu.com/wp-content/uploads/2015/01/cupcake.jpg" alt ="Trulli" width="200" height="222"></th>
-                <td><img src="https://truffle-assets.imgix.net/pxqrocxwsjcc_3akycaxhkoae6wouswaoig_vegan-fruit-mince-pie_landscape_no-graphic.jpg" alt="Trulli" width="300" height="222"></td>
-                <td><img src="http://truffle-assets.imgix.net/pxqrocxwsjcc_7nIEvHD97i8y4EoC6kewWe_banana-split-cupcakes_landscapeThumbnail_en-US.jpeg?w=600&fl=progressive&auto=format,compress&cs=tinysrgb&dpr=1" alt="Trulli" width="300" height="222"></td>
-                <td><img src="https://easybaked.files.wordpress.com/2013/12/pink-champagne-cupcakes.jpg" alt="Trulli" width="200" height="222"></td>
-                <td> <img src="https://brest.maville.com/recettes/sites/maville.com.recettes/files/styles/normale/public/field/image/recette/P0D2353121G_0.jpg?itok=AaQcIme2" alt ="Trulli" width ="200" height="222"></td>
-                <td><img src="https://truffle-assets.imgix.net/pxqrocxwsjcc_4mlylloieeiqmyecgk0qq8_rose%CC%81-champagne-cupcakes-landscape-no-graphic.jpg" alt="Trulli" width="300" height="222"></td>
+                <th><img src="images/cupcake1.jpg" alt ="Trulli" width="200" height="222"></th>
+                <td><img src="images/cupcake2.jpg" alt="Trulli" width="300" height="222"></td>
+                <td><img src="images/cupcake3.jpeg<%-- http://truffle-assets.imgix.net/pxqrocxwsjcc_7nIEvHD97i8y4EoC6kewWe_banana-split-cupcakes_landscapeThumbnail_en-US.jpeg?w=600&fl=progressive&auto=format,compress&cs=tinysrgb&dpr=1--%>" alt="Trulli" width="300" height="222"></td>
+                <td><img src="images/cupcake4.jpg <%--https://easybaked.files.wordpress.com/2013/12/pink-champagne-cupcakes.jpg --%>" alt="Trulli" width="200" height="222"></td>
+                <td> <img src="images/cupcake5.jpg<%-- https://brest.maville.com/recettes/sites/maville.com.recettes/files/styles/normale/public/field/image/recette/P0D2353121G_0.jpg?itok=AaQcIme2--%>" alt ="Trulli" width ="200" height="222"></td>
+                <td><img src="images/cupcake6.jpg" alt="Trulli" width="300" height="222"></td>
             </tr>
 
         </table>
@@ -81,7 +81,7 @@
         
         <hr>
         <div> 
-            <h1>Select the cucpcake you wish to order:</h1>
+            <h1>Select the cupcake you wish to order:</h1>
             <br>
             <h3>hello there bud, wanna order a cup cake? </h3>
 
@@ -95,7 +95,7 @@
             <form id="addProduct" action="?action=order" method="POST">
                 <input type="hidden" name="origin" value="addProduct">
                 <table class="table table-striped">
-                    <thead><tr><th>Bottom</th><th>Topping</th><th>Quantity</th><th>Select</th><th></th></tr></thead>
+                    <thead><tr><th>Topping</th><th>Bottom</th><th>Quantity</th><th>Select</th><th></th></tr></thead>
                     <tbody>
                         <tr> <th> Cupcake Top </th> <th> Cupcake bottom </th> <th> quantity </th>  <th> Confirm </th>  </tr>
 
