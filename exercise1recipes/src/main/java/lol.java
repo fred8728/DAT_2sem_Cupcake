@@ -76,11 +76,15 @@ public class lol extends HttpServlet {
         } else {
             switch (action) {
                 case "newuser":
+
                     newPageUser(request, response);
+                   // createUser(request, response);
+
                     //PageNewUser.generateUser(response);
                     break;
                 case "create_user":
-                    PageCreateUser.CreateUser(request, response);
+                    createUser(request, response);
+                  //  PageCreateUser.CreateUser(request, response);
                     break;
                 case "main":
                     main(request, response);
@@ -139,6 +143,9 @@ public class lol extends HttpServlet {
 
     private void main(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("pageMain.jsp").forward(request, response);
+    }
+        private void createUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("CreateUserPage.jsp").forward(request, response);
     }
 
     private void loggedin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
