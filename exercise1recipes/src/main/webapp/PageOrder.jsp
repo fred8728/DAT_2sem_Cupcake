@@ -47,7 +47,7 @@ TestAccess acc = new TestAccess();
         } catch (Exception e) {
         }
 
-        %>
+        }%>
 
 <% } %>
 
@@ -62,9 +62,9 @@ TestAccess acc = new TestAccess();
 
              <table class=table table-striped><thead><tr><th>Name</th><th>Quantity</th><th>Price</th>
                         <th>Total</th><th>Remove</th></tr></thead><tbody><tr>
-                         <td> <%= finish %>
-                         </td><td><%= quant %></td>
-                         <td><%= price %></td><td class=\"lineprice\"><%=total%> "</td><td><form action=\"Control\" method=\"POST\">
+                         <td> <%--= finish --%>
+                         </td><td><%--= quant --%></td>
+                         <td><%--= price --%></td><td class=\"lineprice\"><%--=total--%> "</td><td><form action=\"Control\" method=\"POST\">
                                 <input type=\"hidden\" name=\"origin\" value=\"removeLine\"><input type=\"hidden\" name=\"lineId\" value=\"473\">
                                 <input type=\"submit\"value=\"remove\"></form></td></tr><tr><td><h4>Total price</h4></td><td></td><td></td>
                         <td id=\"totalprice\"></td><td>
