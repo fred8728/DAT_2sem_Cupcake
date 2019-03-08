@@ -33,6 +33,19 @@
                 background: lightcoral;
                 padding: 15px;
         } 
+        p{
+            font-size:25px;
+            font-family:tahoma; 
+            text-align:center;
+            
+        }
+        h1{
+           font-size:40px;
+           font-family:tahoma;
+           text-align:center;
+           color:white; 
+        }
+     
         </style>
     </head>
     <body>
@@ -49,10 +62,10 @@
 </table>
         <div id ="head"><i style ="font-size:15px; font-family:tahoma; color:white;">A balanced diet is having a cupcake in each hand</i></div>
         <hr>
-            <h1 style="font-size:40px; font-family:tahoma; text-align:center; color:white;">Welcome to a world of cupcakes!</h1>
-            <p style="font-size:25px; font-family:tahoma; text-align:center;"><a href=\exercise1recipes/lol?action=newuser>Create new user!</a></p>
-            <p style="font-size:25px; font-family:tahoma; text-align:center;"><a href=\exercise1recipes/lol?action=buy>Buy something</a></p>
-            <p style="font-size:25px; font-family:tahoma; text-align:center;"><a href=\exercise1recipes/lol?action=login>Log in here!</a></p>
+            <h1>Welcome to a world of cupcakes!</h1>
+            <p><a href=\exercise1recipes/lol?action=newuser>Create new user</a></p>
+            <p><a href=\exercise1recipes/lol?action=buy>Buy something</a></p>
+            <p><a href=\exercise1recipes/lol?action=login>Log in here</a></p>
             <div id ="foot"><i> Cupcake-Huset: Amerikavej 21 -  DK – 1756 København V - CVR-nr.: 87654321</i> </div>
     </body>
 </html>

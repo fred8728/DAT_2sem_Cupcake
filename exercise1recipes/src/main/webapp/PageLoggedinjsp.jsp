@@ -51,7 +51,7 @@
         </table>
         
         <form method=\"GET\">
-            <h1 style="font-size:30px; font-family:tahoma; text-align:center; color:white;"><b>Login here</b></h1>
+            <h1 style="font-size:30px; font-family:tahoma; text-align:center; color:white;"><b>Log in here</b></h1>
             <hr>
             <h1 style= "font-size:20px; font-family:tahoma; text-align:center;"><b>Username:</b></h1>
             <p align ="center"><input type=text name=username value=></p>
