@@ -43,7 +43,18 @@
                 width: 100%;
                 background: lightcoral;
                 padding: 15px;
-        }           
+        }       
+        h1{
+            font-size:30px;
+            font-family:tahoma;
+            text-align:center;
+            color:white;
+        }
+        p{
+            font-size:20px;
+            font-family:tahoma;
+            text-align:center;
+        }
             
         </style>
     </head>
@@ -60,17 +71,15 @@
             </tr>
 
         </table>
-        
-        
         <form method=\"GET\">
-            <h1 style="font-size:30px; font-family:tahoma; text-align:center; color:white;"><b>Make a new User</b></h1>
+            <h1><b>Make a new User</b></h1>
             <hr>
-            <h1 style= "font-size:20px; font-family:tahoma; text-align:center;"><b>Username:</b></h1>
-            <p align ="center"><input type=text name=username value=></p>
-            <h1 style= "font-size:20px; font-family:tahoma; text-align:center;"><b>Password:</b></h1>
-            <p align="center"><input type=password name=password value=></p>
-            <p align="center"><input type=hidden name=action value=create_user></p>
-            <p align="center"><input type=submit value=Create User></p>
+            <p><b>Username:</b></p>
+            <p><input type=text name=username value=></p>
+            <p><b>Password:</b></p>
+            <p><input type=password name=password value=></p>
+            <p><input type=hidden name=action value=create_user></p>
+            <p><input type=submit value=Create User></p>
             <br>
             <div id ="foot"><i> Cupcake-Huset: Amerikavej 21 -  DK – 1756 København V - CVR-nr.: 87654321</i> </div>
         </form>
