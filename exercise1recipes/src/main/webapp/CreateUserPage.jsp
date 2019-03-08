@@ -37,6 +37,17 @@
                 background: lightcoral;
                 padding: 15px;
         } 
+        h1{
+            font-size:30px;
+            font-family:tahoma;
+            text-align:center; 
+            color:white;
+        }
+        p{
+            font-size:25px;
+            font-family:tahoma;
+            text-align:center;
+        }
         </style>
     </head> 
     <body>
@@ -52,10 +63,9 @@
   
 </table>
         <div id ="head"><i style ="font-size:15px; font-family:tahoma; color:white;">A balanced diet is having a cupcake in each hand</i></div>
+        <h1>You have created a new user!</h1>
         <hr>
-        <h1 style="font-size:30px; font-family:tahoma; text-align:center; color:white;">You have created a new user!</h1>
-        
-        <p input ="submit;" style="font-size:25px; font-family:tahoma; text-align:center;"><a href=\exercise1recipes/lol?action=main>Return to main page</a></p>
+        <p input ="submit;"><a href=\exercise1recipes/lol?action=main>Return to main page</a></p>
         <div id ="foot"><i> Cupcake-Huset: Amerikavej 21 -  DK – 1756 København V - CVR-nr.: 87654321</i> </div>
         
     </body>
