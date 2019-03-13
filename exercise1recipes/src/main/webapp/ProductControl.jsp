@@ -76,16 +76,14 @@
         <%TestAccess acc = new TestAccess();%> 
         
         <hr>
-        <div> 
-<<<<<<< HEAD
+        <div>
             <h1>Select the cupcake you wish to order:</h1>
             <br>
-=======
+
 
             <p>hello there bud, wanna order a cup cake? </p>
             
 
->>>>>>> 04678e6371f99256a52c3383f9026bcffdf2ec22
 
            <%--  <table style="width:50%"> <tr> <td> Top </td>  <td> Bottom </td> <td> Amount </td></tr>
                <th> <tr> <td> <td><select name=\"bottom\" id=\"bottomSelect\">\n</td> </td>  </th>
