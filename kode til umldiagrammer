@@ -1,0 +1,27 @@
+til navigationsdiagrammet
+@startuml
+
+Title mainpages
+State Mainlandingpage
+State pagelogin
+State pagecreateuser
+State pagebuy
+State shoppingcart
+
+[*] -> Mainlandingpage
+Mainlandingpage --> pagelogin :all
+Mainlandingpage --> pagecreateuser : all
+Mainlandingpage --> pagebuy : ifloggedin
+pagebuy --> shoppingcart
+shoppingcart --> Mainlandingpage : backtomain
+pagelogin --> Mainlandingpage : ifsuccess
+pagelogin --> pagecreateuser : iffailed
+pagecreateuser --> Mainlandingpage : ifsucces
+
+note right of shoppingcart
+checkout here
+and button back to main for another order
+end note
+
+
+@enduml
