@@ -14,7 +14,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
         <title>Cupcake Ordering</title>
-        <link href="css/styles.css" rel="stylesheet" type="text/css"/>
 
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -24,6 +23,7 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
         <style>
             body{
                 background-color: lightpink;
@@ -73,41 +73,11 @@
         </table>
 
         <div id ="head"><i style ="font-size:15px; font-family:tahoma; color:white;">A balanced diet is having a cupcake in each hand</i></div
-
-        
-        
-        
         <%TestAccess acc = new TestAccess();%> 
         
         <hr>
         <div> 
-<<<<<<< HEAD
-            <h1>Select the cucpcake you wish to order:</h1>
-            <br>
-            <h3>hello there bud, wanna order a cup cake? </h3>
 
-
-
-            <%--  <table style="width:50%"> <tr> <td> Top </td>  <td> Bottom </td> <td> Amount </td></tr>
-                <th> <tr> <td> <td><select name=\"bottom\" id=\"bottomSelect\">\n</td> </td>  </th>
-                 <th> <td> <td><select name=\"bottom\" id=\"bottomSelect\">\n</td> </td> <td> <td> <select name=\"bottom\" id=\"bottomSelect\">\n</td> </td></tr> </th> </table> 
-            --%>
-
-            <form id="addProduct" action="?action=order" method="POST">
-                <input type="hidden" name="origin" value="addProduct">
-                <table class="table table-striped">
-                    <thead><tr><th>Bottom</th><th>Topping</th><th>Quantity</th><th>Select</th><th></th></tr></thead>
-                    <tbody>
-                        <tr> <th> Cupcake Top </th> <th> Cupcake bottom </th> <th> Quantity </th>  <th> Confirm </th>  </tr>
-
-                        <tr>  <td> <select name=\"topping\" id="option"><option value=\"1\"><%= acc.getTops(1)%></option><option value=\"2\"><%= acc.getTops(2)%></option><option value=\"3\"><%= acc.getTops(3)%></option>
-                                    <option value=4><%= acc.getTops(4)%></option><option value=\"5\"><%= acc.getTops(5)%></option><option value=\"6\"><%= acc.getTops(6)%></option>
-                                    <option value=\"7\"><%= acc.getTops(7)%></option><option value=\"8\"><%= acc.getTops(8)%></option><option value=\"9\"><%= acc.getTops(9)%></option> </td> 
-
-                            <td> <select name=\"bottom\" id="option"><option value=\"1\"><%= acc.getBottoms(1)%></option><option value=\"2\"><%= acc.getBottoms(2)%></option><option value=\"3\"><%= acc.getBottoms(3)%></option><option value=\"4\"><%= acc.getBottoms(4)%></option><option value=\"5\"><%= acc.getBottoms(5)%></option><option value=\"6\"><%= acc.getBottoms(6)%></option>
-                                    <option value=\"7\"><%= acc.getBottoms(7)%></option><option value=\"8\"><%= acc.getBottoms(8)%></option><option value=\"9\"><%= acc.getBottoms(9)%></option><option value=\"10\"><%= acc.getBottoms(10)%></option>\"bottomSelect\"></td> 
-=======
->>>>>>> 04678e6371f99256a52c3383f9026bcffdf2ec22
 
             <p>hello there bud, wanna order a cup cake? </p>
             
