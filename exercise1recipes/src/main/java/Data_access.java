@@ -43,6 +43,13 @@ public class Data_access {
         return (ArrayList<User>) users;
     }
      */
+    
+    /**
+     * 
+     * @return a list 
+     * @throws Exception 
+     */
+    
     public ArrayList<Cupcake> getCupcakes() throws Exception {
         DBConnector conn = new DBConnector();
         Statement statement = conn.getConnection().createStatement();

@@ -1,0 +1,31 @@
+til navigationsdiagrammet
+@startuml
+
+Title mainpages
+State pageMain.jsp
+State pageLoggedIn.jsp
+State newPageUser.jsp
+State ProductControl.jsp
+State pageOrder.jsp
+
+[*] -> pageMain.jsp
+pageMain.jsp --> pageLoggedIn.jsp :all
+pageMain.jsp --> newPageUser.jsp : all
+pageMain.jsp --> ProductControl.jsp : ifloggedin
+ProductControl.jsp --> pageOrder.jsp
+pageOrder.jsp --> pageMain.jsp : backtomain
+pageLoggedIn.jsp --> pageMain.jsp : ifsuccess
+pageLoggedIn.jsp --> newPageUser.jsp : iffailed
+newPageUser.jsp --> pageMain.jsp : ifsucces
+
+note right of pageOrder.jsp
+checkout here
+and button back to main for another order
+end note
+note left of pageLoggedIn.jsp
+if failed you get to 
+try to login again
+end note
+
+
+@enduml
