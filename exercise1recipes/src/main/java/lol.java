@@ -107,6 +107,7 @@ public class lol extends HttpServlet {
                     //PageBuy.generateBuy(request, response);
                     break;
                 case "order":
+                    //order(request, response);
                     PageOrder.generateOrder(request, response);
                     break;
                 case "test":
@@ -162,7 +163,15 @@ public class lol extends HttpServlet {
         request.getRequestDispatcher("ProductControl.jsp").forward(request, response);
     }
 
+       private void order(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("PageOrder.jsp").forward(request, response);
+    } 
+    
+    
+
+
     private void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         request.getRequestDispatcher("PageLogin.jsp").forward(request, response);
     }
 

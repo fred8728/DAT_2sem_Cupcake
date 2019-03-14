@@ -26,11 +26,11 @@ public class Main {
         
         System.out.println("___________________________________");
         
-        System.out.println("List of cupcakes:");
-        List <Cupcake> cup = accessor.getCupcakes();
-        for (Cupcake c : cup){
-            System.out.println(c.toString());
-        }
+        //System.out.println("List of cupcakes:");
+        //List <Cupcake> cup = accessor.getCupcakes();
+        //for (Cupcake c : cup){
+          //  System.out.println(c.toString());
+        //}
         
         System.out.println("________________________________");
         
@@ -51,7 +51,7 @@ public class Main {
          System.out.println("________________________________");
          
          System.out.println("Comparing Passwordz");
-         boolean lol = accessor.comparePassword("DAV5000", "1234");
+         boolean lol = accessor.comparePassword("SIM2000", "1234");
          System.out.println(lol);
     
           System.out.println("________________________________");
