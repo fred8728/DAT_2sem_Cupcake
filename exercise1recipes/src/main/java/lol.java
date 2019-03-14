@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import DataLayer.TestAccess;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -78,13 +79,13 @@ public class lol extends HttpServlet {
                 case "newuser":
 
                     newPageUser(request, response);
-                   // createUser(request, response);
+                    // createUser(request, response);
 
                     //PageNewUser.generateUser(response);
                     break;
                 case "create_user":
                     createUser(request, response);
-                  //  PageCreateUser.CreateUser(request, response);
+                    //  PageCreateUser.CreateUser(request, response);
                     break;
                 case "main":
                     main(request, response);
@@ -144,7 +145,12 @@ public class lol extends HttpServlet {
     private void main(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("pageMain.jsp").forward(request, response);
     }
-        private void createUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    private void createUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, Exception {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        TestAccess.createUser(username, password);
+
         request.getRequestDispatcher("CreateUserPage.jsp").forward(request, response);
     }
 
@@ -162,6 +168,7 @@ public class lol extends HttpServlet {
 
     private void
             newPageUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         request.getRequestDispatcher("NewPageUser.jsp").forward(request, response);
     }
 

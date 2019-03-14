@@ -205,14 +205,20 @@ public UserTest getUser(String username) throws Exception {
     }
 
     //menes der email eller balance mon tro
-    public void createUser(String username, String password) throws Exception {
+    public static void createUser(String username, String password) throws Exception {
         DBConnectortest conn = new DBConnectortest();
         Statement statement = conn.getConnection().createStatement();
+        if(username == null || password == null){
+            System.out.println("error");
+            
+        }
+        else{
         String query
                 = "insert into USERS (USERNAME, PASSWORD, BALANCE, MAIL)"
                 + "values "
                 + "('" + username + "', '" + password + "',0 , 'botmail123');";
         statement.executeUpdate(query);
+        }
     }
     
         public void sendOrderToDB(int CUPCAKETOP_ID, int CUPCAKEBOT_ID, int AMOUNT) throws Exception {

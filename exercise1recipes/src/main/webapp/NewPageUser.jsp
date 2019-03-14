@@ -4,6 +4,7 @@
     Author     : ahmed
 --%>
 
+<%@page import="DataLayer.TestAccess"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -48,6 +49,8 @@
         </style>
     </head>
     <body>
+        
+    
         <div id ="head"><i style ="font-size:15px; font-family:tahoma; color:white;">A balanced diet is having a cupcake in each hand</i></div>
         <table style="width:100%">
             <tr>
@@ -59,15 +62,16 @@
                 <td><img src="images/cupcake6.jpg" alt="Trulli" width="300" height="222"></td>
             </tr>
         </table>
-        <form method=\"GET\">
+        <form method=\"POST\">
             <h1><b>Make a new User</b></h1>
             <hr>
             <p><b>Username:</b></p>
-            <p><input type=text name=username value=></p>
+            <p><input type=text name="username"></p>
             <p><b>Password:</b></p>
-            <p><input type=password name=password value=></p>
+            <p><input type=password name="password" ></p>
             <p><input type=hidden name=action value=create_user></p>
-            <p><input type=submit value=Create User></p>
+            
+            <p><input type=submit value=Create > </p>
             <br>
             <div id ="foot"><i> Cupcake-Huset: Amerikavej 21 -  DK – 1756 København V - CVR-nr.: 87654321</i> </div>
         </form>
