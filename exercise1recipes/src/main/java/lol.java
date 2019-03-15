@@ -119,7 +119,14 @@ public class lol extends HttpServlet {
                     response.sendRedirect("pageMain.jsp"); // setup to link to a .jsp file
                     // PageOrder.generateOrder(request, response);
                     break;
+                    case "main-logout":
+                    session.setAttribute("loggedIn", false);
+                    main(request, response); // setup to link to a .jsp file
+                    // PageOrder.generateOrder(request, response);
+                    break;
             }
+            
+           
         }
 
         response.setContentType("text/html;charset=UTF-8");

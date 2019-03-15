@@ -61,7 +61,13 @@
         </table>
         <div id ="head"><i style ="font-size:15px; font-family:tahoma; color:white;">A balanced diet is having a cupcake in each hand</i></div>
         <hr>
-
+        <form method=\"POST\">
+            <hr>
+            <p><input type=hidden name=action value=main-logout></p>
+            <p><input type=submit value=logout > </p>
+            <br>
+            <div id ="foot"><i> Cupcake-Huset: Amerikavej 21 -  DK – 1756 København V - CVR-nr.: 87654321</i> </div>
+        </form>
             <h1>Welcome to a world of cupcakes!</h1>
             <p><a href=\exercise1recipes/lol?action=newuser>Create new user</a></p>
             <p><a href=\exercise1recipes/lol?action=buy>Buy something</a></p>
