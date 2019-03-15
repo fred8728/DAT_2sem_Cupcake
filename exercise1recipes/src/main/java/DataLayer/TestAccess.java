@@ -205,6 +205,9 @@ public UserTest getUser(String username) throws Exception {
     }
 
     //menes der email eller balance mon tro
+/**
+ creates a user which get added to the SQL databasse, there is only need for a loing name and password, 
+ * but could be improved with having the option to add a email ass well. */
     public static void createUser(String username, String password) throws Exception {
         DBConnectortest conn = new DBConnectortest();
         Statement statement = conn.getConnection().createStatement();
@@ -220,7 +223,8 @@ public UserTest getUser(String username) throws Exception {
         statement.executeUpdate(query);
         }
     }
-    
+    /** 
+     sends a cupcake order to the database, the parameters it takes are for the top cupcake I sand the bottom cupcake ID, and also a amount.*/
         public void sendOrderToDB(int CUPCAKETOP_ID, int CUPCAKEBOT_ID, int AMOUNT) throws Exception {
         DBConnectortest conn = new DBConnectortest();
         Statement statement = conn.getConnection().createStatement();
