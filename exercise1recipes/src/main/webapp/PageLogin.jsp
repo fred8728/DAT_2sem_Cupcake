@@ -69,6 +69,7 @@
         <hr>
         <p><a href=\exercise1recipes/lol?action=login>Your username or password is incorrect</a></p>
         <p><a href=\exercise1recipes/lol?action=newuser>Create a new user</a></p>
+        <p input ="submit;" style="font-size:25px; font-family:tahoma; text-align:center;"><a href=\exercise1recipes/lol?action=main>Return to main page</a></p>
         <div id ="foot"><i> Cupcake-Huset: Amerikavej 21 -  DK – 1756 København V - CVR-nr.: 87654321</i> </div>
 
     </body>

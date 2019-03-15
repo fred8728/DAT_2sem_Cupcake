@@ -62,17 +62,18 @@ public class lol extends HttpServlet {
         ArrayList<String> list = new ArrayList<>();
         Data_access accessor = new Data_access();
         ArrayList<Integer> num = new ArrayList<>();
-        HttpSession session = request.getSession();
+        HttpSession session = request.getSession(true);
         Boolean loggedIn = (Boolean) session.getAttribute("loggedIn");
         String action = request.getParameter("action");
         if (null == action) {
-            if (loggedIn == null || !loggedIn) {
+            if (session.isNew() || loggedIn == null || !loggedIn) {
+                session.setAttribute("loggedIn", false);
                 main(request, response);
                 //PageMain.generateMain(response);
-                PageLogin.generateLogin(request, response);
-                PageNewUser.generateUser(response);
+                // PageLogin.generateLogin(request, response);
+                //PageNewUser.generateUser(response);
             }
-            PageMain.generateMain(response);
+            // PageMain.generateMain(response);
 
         } else {
             switch (action) {
@@ -92,18 +93,22 @@ public class lol extends HttpServlet {
                     //   PageMain.generateMain(response); 
                     break;
                 case "login":
-                    session.setAttribute("loggedIn", true);
+                    
                     loggedin(request, response);
 
                     //PageLoggedIn.generateLoggedIn(response);
                     break;
                 case "logged-in":
+                    session.setAttribute("loggedIn", true);
                     login(request, response);
-                    PageLogin.generateLogin(request, response);
+                   // PageLogin.generateLogin(request, response);
                     break;
                 case "buy":
-                    buy(request, response);
-
+                    if (loggedIn == false) {
+                        main(request, response);
+                    } else {
+                        buy(request, response);
+                    }
                     //PageBuy.generateBuy(request, response);
                     break;
                 case "order":
@@ -114,7 +119,6 @@ public class lol extends HttpServlet {
                     response.sendRedirect("pageMain.jsp"); // setup to link to a .jsp file
                     // PageOrder.generateOrder(request, response);
                     break;
-
             }
         }
 
@@ -163,12 +167,9 @@ public class lol extends HttpServlet {
         request.getRequestDispatcher("ProductControl.jsp").forward(request, response);
     }
 
-       private void order(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void order(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("PageOrder.jsp").forward(request, response);
-    } 
-    
-    
-
+    }
 
     private void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
