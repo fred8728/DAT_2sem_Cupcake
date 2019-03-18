@@ -8,16 +8,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="DataLayer.TestAccess"%>
 
-
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Your order is done!</h1>
 <%
     TestAccess acc = new TestAccess();
 
@@ -42,6 +32,16 @@
     String finish = namee + toppp;
     acc.sendOrderToDB(bot, top, quanti);
  %>
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <h1>Your order is done!</h1>
 
         
         <table class=table table-striped><thead><tr><th>Name</th><th>Quantity</th><th>Price</th>
