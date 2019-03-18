@@ -112,8 +112,8 @@ public class lol extends HttpServlet {
                     //PageBuy.generateBuy(request, response);
                     break;
                 case "order":
-                    //order(request, response);
-                    PageOrder.generateOrder(request, response);
+                    order(request, response);
+                    //PageOrder.generateOrder(request, response);
                     break;
                 case "test":
                     response.sendRedirect("pageMain.jsp"); // setup to link to a .jsp file
