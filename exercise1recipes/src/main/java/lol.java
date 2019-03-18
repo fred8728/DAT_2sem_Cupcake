@@ -99,7 +99,7 @@ public class lol extends HttpServlet {
                     //PageLoggedIn.generateLoggedIn(response);
                     break;
                 case "logged-in":
-                    session.setAttribute("loggedIn", true);
+                    
                     login(request, response);
                    // PageLogin.generateLogin(request, response);
                     break;
@@ -121,9 +121,13 @@ public class lol extends HttpServlet {
                     break;
                     case "main-logout":
                     session.setAttribute("loggedIn", false);
-                    main(request, response); // setup to link to a .jsp file
-                    // PageOrder.generateOrder(request, response);
+                    main(request, response);
                     break;
+                    case "main-login":
+                    session.setAttribute("loggedIn", true);
+                    main(request, response);
+                    break;
+                    
             }
             
            
