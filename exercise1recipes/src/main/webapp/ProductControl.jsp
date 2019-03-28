@@ -23,41 +23,7 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
-        <link href="css/style.css" rel="stylesheet" type="text/css"/>
-        <style>
-            body{
-                background-color: lightpink;
-                margin: 20px;
-                width: 1450px;
-                padding: 20px;
-            }
-            div#head{
-                position: fixed;
-                top: 0px;
-                left: 0px;
-                width: 100%;
-                background: lightcoral;
-                padding: 15px;  
-            }
-            div#foot{
-                position: fixed;
-                bottom: 0px;
-                left: 0px;
-                width: 100%;
-                background: lightcoral;
-                padding: 15px;
-            } 
-            img{
-
-
-            }
-            preview {
-                display: inline-block;
-                margin: 0 40px 0 0;
-            }
-            
-        </style>
-
+        <link href ="style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <table style="width:100%">

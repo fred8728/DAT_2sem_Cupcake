@@ -14,42 +14,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Page login</title>
-        <style>
-
-            body{
-                background-color: lightpink;
-                margin: 20px;
-                width: 1450px;
-                padding: 20px;
-            }
-            div#head{
-                position: fixed;
-                top: 0px;
-                left: 0px;
-                width: 100%;
-                background: lightcoral;
-                padding: 15px;  
-            }
-            div#foot{
-                position: fixed;
-                bottom: 0px;
-                left: 0px;
-                width: 100%;
-                background: lightcoral;
-                padding: 15px;
-            } 
-                    h1{
-            font-size:30px;
-            font-family:tahoma;
-            text-align:center;
-            color:white;
-        }
-        p{
-            font-size:25px; 
-            font-family:tahoma;
-            text-align:center
-        }
-        </style>
+        <link href ="style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <%
